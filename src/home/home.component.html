@@ -1,0 +1,27 @@
+<section class="hero is-white is-fullheight-with-navbar">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title is-1">Alejandro Ramos Casado</p>
+      <p class="subtitle">Página de presentación personal</p>
+      <figure>
+        <img class="pfp-image" src="/assets/pfp.jpg" />
+      </figure>
+      <p class="title is-3">
+        es un
+        <ngx-typed-writer
+          [strings]="[
+            'Desarrollador Web',
+            'Artista Técnico',
+            'Riggeador',
+            'Modelador 3D'
+          ]"
+          [shuffle]="true"
+          [isHTML]="true"
+          [backSpeed]="20"
+          [typeSpeed]="30"
+        >
+        </ngx-typed-writer>
+      </p>
+    </div>
+  </div>
+</section>
