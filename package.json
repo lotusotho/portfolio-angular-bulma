@@ -26,6 +26,7 @@
     "express": "^4.18.2",
     "ngx-timeline-albe": "^1.7.0",
     "ngx-typed-writer": "1.3.0",
+    "portfolio-angular-bulma": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
