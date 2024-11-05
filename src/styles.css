@@ -4,6 +4,12 @@
   font-family: Outfit;
 }
 
-body {
-  background-color: white;
+body,
+.hero {
+  background: rgb(235, 234, 245);
+  background: linear-gradient(
+    0deg,
+    rgb(231, 229, 252) 0%,
+    rgba(255, 255, 255, 1) 30%
+  );
 }
