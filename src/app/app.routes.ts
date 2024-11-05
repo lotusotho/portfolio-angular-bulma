@@ -31,6 +31,11 @@ export const routes: Routes = [
         path: 'knowledge',
         component: KnowledgeComponent,
       },
+      {
+        path: '**',
+        redirectTo: '/home',
+        pathMatch: 'full',
+      },
     ],
   },
 ];

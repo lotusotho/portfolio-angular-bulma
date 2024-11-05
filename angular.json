@@ -94,6 +94,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
