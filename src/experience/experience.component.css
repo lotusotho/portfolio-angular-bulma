@@ -2,26 +2,6 @@ img {
   object-fit: cover;
 }
 
-.fixed-grid .card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.card-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-content .content {
-  flex-grow: 1;
-}
-
-.card-footer {
-  margin-top: auto;
-}
-
 .scroll-indicator {
   position: fixed;
   bottom: 20px;

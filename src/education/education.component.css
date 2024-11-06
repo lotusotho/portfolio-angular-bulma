@@ -22,8 +22,34 @@ img {
   margin-top: auto;
 }
 
-@media (min-width: 769px) {
-  .container {
-    height: 100vh;
+.scroll-indicator {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  cursor: pointer;
+  color: black;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #000;
+  margin: 5px auto;
+}
+
+@media (min-width: 1024px) {
+  .scroll-indicator {
+    display: none;
   }
+}
+
+.custom-theme-timeline {
+  --ngx-timeline-icon: black;
+  --ngx-timeline-period-inner-container: black;
+  --ngx-timeline-line-background: black;
+  --ngx-timeline-period-inner-container: black;
 }

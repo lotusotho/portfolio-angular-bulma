@@ -1,9 +1,53 @@
 <div class="container is-fullhd fixed-grid has-3-cols has-1-cols-mobile p-4">
   <p class="title is-1 has-text-black">Educación</p>
   <hr />
-  <div class="grid">
-    <!-- Card 1 -->
-    <div class="card" data-aos="fade-up">
+  <div class="custom-theme-timeline">
+    <ng-template #eventCustomTemplate let-event="event" let-index="index">
+      <div class="card" data-aos="fade-up">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <!-- Acceso a la URL de la imagen específica de cada evento -->
+            <img
+              [src]="event.eventInfo['imageUrl']"
+              alt="{{ event.eventInfo['title'] }}"
+            />
+          </figure>
+        </div>
+        <div class="card-content">
+          <p class="subtitle is-6">{{ event.eventInfo["description"] }}</p>
+          <footer class="card-footer">
+            <!-- Usando routerLink del evento actual -->
+            <a
+              class="button card-footer-item is-success"
+              [routerLink]="event.eventInfo['routerLink']"
+              routerLinkActive="router-link-active"
+            >
+              Ver más
+            </a>
+          </footer>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template #dateInstantCustomTemplate let-item="item">
+      <p class="title is-4 has-text-black">
+        {{ item["smallTitle"] }}
+      </p>
+    </ng-template>
+    <ngx-timeline
+      [events]="events"
+      [langCode]="'es'"
+      [enableAnimation]="true"
+      [reverseOrder]="true"
+      [groupEvent]="groupEvent"
+      [orientation]="orientation"
+      [changeSide]="changeSide"
+      [eventCustomTemplate]="eventCustomTemplate"
+      [dateInstantCustomTemplate]="dateInstantCustomTemplate"
+    ></ngx-timeline>
+  </div>
+  <!-- <div class="grid"> -->
+  <!-- Card 1 -->
+  <!-- <div class="card" data-aos="fade-up">
       <div class="card-image">
         <figure class="image is-4by3">
           <img src="/assets/adaitsLogo.png" alt="Logo TLP" />
@@ -37,9 +81,9 @@
           >
         </footer>
       </div>
-    </div>
-    <!-- Card 2 -->
-    <div class="card" data-aos="fade-up">
+    </div> -->
+  <!-- Card 2 -->
+  <!-- <div class="card" data-aos="fade-up">
       <div class="card-image">
         <figure class="image is-4by3" data-aos="zoom-in">
           <img src="/assets/eusaLogo.png" alt="Placeholder image" />
@@ -77,9 +121,9 @@
           >
         </footer>
       </div>
-    </div>
-    <!-- Card 3 -->
-    <div class="card" data-aos="fade-up">
+    </div> -->
+  <!-- Card 3 -->
+  <!-- <div class="card" data-aos="fade-up">
       <div class="card-image">
         <figure class="image is-4by3" data-aos="zoom-in">
           <img src="/assets/dhPic.png" alt="Placeholder image" />
@@ -116,5 +160,13 @@
         </footer>
       </div>
     </div>
+  </div>
+</div>
+  </div>
+</div> -->
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" *ngIf="!hasScrolled">
+    <span>Scroll</span>
+    <div class="arrow-down"></div>
   </div>
 </div>
