@@ -22,3 +22,13 @@
   border-top: 10px solid #000;
   margin: 5px auto;
 }
+
+.typewriter {
+  text-shadow: 3px 3px #cfcfcf;
+}
+
+@media (min-width: 1024px) {
+  .scroll-indicator {
+    display: none;
+  }
+}
