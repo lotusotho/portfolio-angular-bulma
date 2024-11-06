@@ -21,3 +21,9 @@ img {
 .card-footer {
   margin-top: auto;
 }
+
+@media (min-width: 769px) {
+  .container {
+    height: 100vh;
+  }
+}
