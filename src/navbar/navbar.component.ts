@@ -10,7 +10,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
   styleUrl: 'navbar.component.css',
 })
 export class NavbarComponent implements OnInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {

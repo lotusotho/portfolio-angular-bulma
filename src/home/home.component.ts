@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NgxTypedWriterModule } from 'ngx-typed-writer';
 
 @Component({
@@ -9,12 +9,8 @@ import { NgxTypedWriterModule } from 'ngx-typed-writer';
   templateUrl: 'home.component.html',
   styleUrl: 'home.component.css',
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   hasScrolled = false;
-
-  constructor() {}
-
-  ngOnInit() {}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,12 +8,8 @@ import { RouterLink } from '@angular/router';
   selector: 'app-knowledge',
   templateUrl: 'knowledge.component.html',
 })
-export class KnowledgeComponent implements OnInit {
+export class KnowledgeComponent {
   hasScrolled = false;
-
-  constructor() {}
-
-  ngOnInit() {}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

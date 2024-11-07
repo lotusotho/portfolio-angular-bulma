@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,12 +9,8 @@ import { RouterLink } from '@angular/router';
   templateUrl: 'experience.component.html',
   styleUrl: 'experience.component.css',
 })
-export class ExperienceComponent implements OnInit {
+export class ExperienceComponent {
   hasScrolled = false;
-
-  constructor() {}
-
-  ngOnInit() {}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
