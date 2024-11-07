@@ -7,6 +7,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
   imports: [RouterOutlet, RouterLink],
   selector: 'app-navbar',
   templateUrl: 'navbar.component.html',
+  styleUrl: 'navbar.component.css',
 })
 export class NavbarComponent implements OnInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}

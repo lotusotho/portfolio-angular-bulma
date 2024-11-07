@@ -1,0 +1,7 @@
+.arcSvg {
+  fill: white;
+}
+
+.logo:active .arcSvg {
+  fill-opacity: 0.5;
+}
