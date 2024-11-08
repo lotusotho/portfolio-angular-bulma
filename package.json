@@ -3,12 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "pnpm run build && wrangler pages dev dist/cloudflare --compatibility-date=2024-11-06 --experimental-local",
+    "build": "ng build && pnpm run process",
     "postbuild": "ng lint && gulp compress",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:portfolio-angular-bulma": "node dist/portfolio-angular-bulma/server/server.mjs",
+    "process": "node ./tools/copy-files.mjs && node ./tools/alter-polyfills.mjs",
+    "deploy": "pnpm run build && wrangler pages deploy dist/cloudflare",
     "lint": "ng lint"
   },
   "private": true,
@@ -22,23 +24,22 @@
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/platform-server": "^18.2.0",
     "@angular/router": "^18.2.0",
-    "@angular/ssr": "^18.2.9",
     "@frxjs/ngx-timeline": "^18.0.7",
     "aos": "^2.3.4",
     "bulma": "^1.0.2",
-    "express": "^4.18.2",
-    "ngx-typed-writer": "1.3.0",
+    "ngx-typed-writer": "^1.3.0",
     "portfolio-angular-bulma": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.2.9",
-    "@angular/cli": "^18.2.9",
+    "@angular-devkit/build-angular": "^18.2.11",
+    "@angular/cli": "^18.2.11",
     "@angular/compiler-cli": "^18.2.0",
+    "@cloudflare/workers-types": "^4.20241106.0",
+    "@miniflare/tre": "3.0.0-next.13",
     "@types/aos": "^3.0.7",
-    "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
     "angular-eslint": "18.4.0",
@@ -52,6 +53,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.5.2",
-    "typescript-eslint": "8.10.0"
+    "typescript-eslint": "8.10.0",
+    "wrangler": "0.0.0-c7b157ba7"
   }
 }
