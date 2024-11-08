@@ -7,6 +7,7 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink, NgIf],
   selector: 'app-knowledge',
   templateUrl: 'knowledge.component.html',
+  styleUrl: 'knowledge.component.css',
 })
 export class KnowledgeComponent {
   hasScrolled = false;

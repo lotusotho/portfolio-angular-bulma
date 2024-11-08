@@ -1,7 +1,47 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@font-face {
+  font-family: "Outfit";
+  font-weight: 100;
+  font-style: normal;
+  src: url(/assets/font/Outfit-Thin.woff2) format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 300;
+  font-style: normal;
+  src: url(/assets/font/Outfit-Light.woff2) format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/font/Outfit-Regular.woff2) format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 500;
+  font-style: normal;
+  src: url(/assets/font/Outfit-Medium.woff2) format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 700;
+  font-style: normal;
+  src: url(/assets/font/Outfit-Bold.woff2) format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 900;
+  font-style: normal;
+  src: url(/assets/font/Outfit-Black.woff2) format("opentype");
+}
 
 * {
-  font-family: Outfit;
+  font-family: "Outfit", serif;
 }
 
 body,
