@@ -1,7 +1,5 @@
-[
-  { "source": "/home", "destination": "/index.html" },
-  { "source": "/experience", "destination": "/index.html" },
-  { "source": "/education", "destination": "/index.html" },
-  { "source": "/knowledge", "destination": "/index.html" },
-  { "source": "/**", "destination": "/index.html" }
-]
+{
+	"version": 1,
+	"include": ["/*"],
+	"exclude": ["/*.*"]
+}
