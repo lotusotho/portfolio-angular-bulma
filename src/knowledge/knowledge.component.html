@@ -2,124 +2,49 @@
   <p class="title is-1 has-text-black">Conocimientos</p>
   <hr />
   <div class="grid">
-    <!-- Card 1 -->
-    <div class="card" data-aos="fade-up">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img src="/assets/javaLogo.png" alt="Logo Angular" />
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img src="/assets/sm/javaSmallLogo.png" alt="Placeholder image" />
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">Java</p>
-            <p class="subtitle is-6">Conocimientos en el desarrollo con Java</p>
-          </div>
+    <!-- Card Template -->
+    <div *ngFor="let card of knowledgeCards">
+      <div class="card" data-aos="fade-up">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="{{ card.imgBig }}" alt="{{ card.imgBigAlt }}" />
+          </figure>
         </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="{{ card.imgSmall }}" alt="{{ card.imgSmallAlt }}" />
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">{{ card.mainTitle }}</p>
+              <p class="subtitle is-6">
+                {{ card.subtitle }}
+              </p>
+            </div>
+          </div>
 
-        <div class="content">
-          <p class="subtitle">
-            Conocimientos en el desarrollo con Java 21 y algoritmos para
-            desarrollo de escritorio.
-          </p>
-        </div>
-        <footer class="card-footer">
-          <a
-            class="button card-footer-item is-success"
-            [routerLink]="['/exp-0']"
-            routerLinkActive="router-link-active"
-            >Ver más</a
-          >
-        </footer>
-      </div>
-    </div>
-    <!-- Card 2 -->
-    <div class="card" data-aos="fade-up">
-      <div class="card-image">
-        <figure class="image is-4by3" data-aos="zoom-in">
-          <img src="/assets/tsjsLogo.png" alt="Placeholder image" />
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img src="/assets/sm/jsSmallLogo.png" alt="Placeholder image" />
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">Javascript | Typescript</p>
-            <p class="subtitle is-6">
-              Desarrollo usando lenguajes como Javascript y Typescript
+          <div class="content">
+            <p class="subtitle">
+              {{ card.description }}
             </p>
           </div>
+          <footer class="card-footer">
+            <a
+              class="button card-footer-item is-success"
+              [routerLink]="['{{card.routerLink}}']"
+              routerLinkActive="router-link-active"
+              >Ver más</a
+            >
+          </footer>
         </div>
-
-        <div class="content">
-          <p class="subtitle">
-            Programación tanto en Typescript como Javascript tanto para backend
-            como frontend usando Node.js y librerias como Express.js, React o
-            frameworks como Angular.
-          </p>
-        </div>
-        <footer class="card-footer">
-          <a
-            class="button card-footer-item is-success"
-            [routerLink]="['/exp-1']"
-            routerLinkActive="router-link-active"
-            >Ver más</a
-          >
-        </footer>
-      </div>
-    </div>
-    <!-- Card 3 -->
-    <div class="card" data-aos="fade-up">
-      <div class="card-image">
-        <figure class="image is-4by3" data-aos="zoom-in">
-          <img src="/assets/angLogo.png" alt="Placeholder image" />
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          <div class="media-left">
-            <figure class="image is-96x96">
-              <img src="/assets/sm/angSmallLogo.png" alt="Placeholder image" />
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">Angular 18</p>
-            <p class="subtitle is-6">
-              Conocimientos y experiencias desarrollando páginas usando Angular
-              18
-            </p>
-          </div>
-        </div>
-
-        <div class="content">
-          <p class="subtitle">
-            Experiencia creando páginas web usando Angular 18 y Node.js con
-            npm/pnpm.
-          </p>
-        </div>
-        <footer class="card-footer">
-          <a
-            class="button card-footer-item is-success"
-            [routerLink]="['/exp-2']"
-            routerLinkActive="router-link-active"
-            >Ver más</a
-          >
-        </footer>
       </div>
     </div>
   </div>
-</div>
-<!-- Scroll Indicator -->
-<div class="scroll-indicator" *ngIf="!hasScrolled">
-  <span>Scroll</span>
-  <div class="arrow-down"></div>
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" *ngIf="!hasScrolled">
+    <span>Scroll</span>
+    <div class="arrow-down"></div>
+  </div>
 </div>

@@ -13,11 +13,11 @@ import { NgFor, NgIf } from '@angular/common';
 export class ExperienceComponent {
   hasScrolled = false;
 
-  cards: Cards[] = [
+  ExperienceCards: Cards[] = [
     {
       imgBig: '/assets/tlpLogo.jpg',
       imgBigAlt: 'Logo TLP',
-      imgSmall: 'https://bulma.io/assets/images/placeholders/96x96.png',
+      imgSmall: '/assets/sm/routerSmallLogo.png',
       imgSmallAlt: 'Mini logo TLP',
       mainTitle: 'Administrador de sistemas',
       subtitle: 'TELEPALMA S.L - La Palma del Condado, Huelva - 2020',
@@ -27,7 +27,7 @@ export class ExperienceComponent {
     {
       imgBig: '/assets/ccarmenLogo.png',
       imgBigAlt: 'Logo Confitería del Carmen',
-      imgSmall: 'https://bulma.io/assets/images/placeholders/96x96.png',
+      imgSmall: '/assets/sm/devWebSmallLogo.png',
       imgSmallAlt: 'Mini logo Confitería del Carmen',
       mainTitle: 'Desarrollador Web',
       subtitle: 'CONFITERÍA DEL CARMEN, La Palma del Condado, Huelva - 2021',
@@ -38,7 +38,7 @@ export class ExperienceComponent {
     {
       imgBig: '/assets/tmbrLogo.png',
       imgBigAlt: 'Logo Timberfilms',
-      imgSmall: 'https://bulma.io/assets/images/placeholders/96x96.png',
+      imgSmall: '/assets/sm/riggerSmallLogo.png',
       imgSmallAlt: 'Mini logo Timberfilms',
       mainTitle: 'Artista técnico de personajes 3D',
       subtitle: 'TIMBERFILMS - Sevilla - 2022',
@@ -49,7 +49,7 @@ export class ExperienceComponent {
     {
       imgBig: '/assets/andreaPic.png',
       imgBigAlt: 'Imagen de proyecto de Telepalma',
-      imgSmall: 'https://bulma.io/assets/images/placeholders/96x96.png',
+      imgSmall: '/assets/sm/andreaSmallLogo.png',
       imgSmallAlt: 'Mini logo Telepalma',
       mainTitle: 'Programador y modelador 3D',
       subtitle: 'TELEPALMA S.L - La Palma del Condado, Huelva - 2023',
@@ -60,7 +60,7 @@ export class ExperienceComponent {
     {
       imgBig: '/assets/guadalinfoPic.png',
       imgBigAlt: 'Logo Guadalinfo',
-      imgSmall: 'https://bulma.io/assets/images/placeholders/96x96.png',
+      imgSmall: '/assets/sm/guadalinfoSmallLogo.png',
       imgSmallAlt: 'Mini logo Guadalinfo',
       mainTitle: 'Dinamizador y gestor',
       subtitle: 'GUADALINFO - La Palma del Condado, Huelva - 2023',
