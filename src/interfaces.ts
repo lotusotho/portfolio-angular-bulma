@@ -1,7 +1,7 @@
 export interface Cards {
-  imgBig: any;
+  imgBig: string;
   imgBigAlt: string;
-  imgSmall: any;
+  imgSmall: string;
   imgSmallAlt: string;
   mainTitle: string;
   subtitle: string;
@@ -12,7 +12,7 @@ export interface Cards {
 export interface Home {
   title: string;
   pageDescription: string;
-  imgPfp: any;
+  imgPfp: string;
   imgPfpAlt: string;
   phrases: string[];
   description: string;
