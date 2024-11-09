@@ -3,6 +3,13 @@
 >
   <p class="title is-1 has-text-black">Experiencia Laboral</p>
   <hr />
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" *ngIf="!hasScrolled">
+    <span>Scroll</span>
+    <div class="arrow-down"></div>
+  </div>
+
   <div class="grid">
     <!-- Card Template -->
     <div *ngFor="let card of ExperienceCards">
@@ -42,12 +49,6 @@
           </footer>
         </div>
       </div>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator" *ngIf="!hasScrolled">
-      <span>Scroll</span>
-      <div class="arrow-down"></div>
     </div>
   </div>
 </div>
