@@ -1,18 +1,17 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Cards } from '../interfaces';
 import { NgFor, NgIf } from '@angular/common';
+import { ScrollComponent } from '../scroll/scroll.component';
 
 @Component({
   standalone: true,
-  imports: [RouterLink, NgFor, NgIf],
-  selector: 'app-exp',
+  imports: [RouterLink, NgFor, NgIf, ScrollComponent, ScrollComponent],
+  selector: 'app-experience',
   templateUrl: 'experience.component.html',
   styleUrl: 'experience.component.css',
 })
 export class ExperienceComponent {
-  hasScrolled = false;
-
   ExperienceCards: Cards[] = [
     {
       imgBig: '/assets/tlpLogo.jpg',
@@ -69,9 +68,4 @@ export class ExperienceComponent {
       routerLink: '/exp-4',
     },
   ];
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.hasScrolled = window.scrollY > 0;
-  }
 }

@@ -12,8 +12,6 @@ import AOS from 'aos';
   templateUrl: './app.component.html',
 })
 export class AppComponent implements AfterViewInit {
-  title = 'portfolio-angular-bulma';
-
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   ngAfterViewInit(): void {
