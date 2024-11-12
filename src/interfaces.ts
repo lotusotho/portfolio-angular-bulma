@@ -17,3 +17,10 @@ export interface Home {
   phrases: string[];
   description: string;
 }
+
+export interface Details {
+  title: string;
+  image: string;
+  description: string;
+  routerLink: string;
+}

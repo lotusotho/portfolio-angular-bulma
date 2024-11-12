@@ -4,6 +4,7 @@ import { HomeComponent } from '../home/home.component';
 import { KnowledgeComponent } from '../knowledge/knowledge.component';
 import { ExperienceComponent } from '../experience/experience.component';
 import { EducationComponent } from '../education/education.component';
+import { DetailsComponent } from '../details/details.component';
 
 export const routes: Routes = [
   {
@@ -30,6 +31,10 @@ export const routes: Routes = [
       {
         path: 'knowledge',
         component: KnowledgeComponent,
+      },
+      {
+        path: 'experience/exp-0',
+        component: DetailsComponent,
       },
       {
         path: '**',

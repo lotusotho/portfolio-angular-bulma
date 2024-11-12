@@ -23,7 +23,7 @@ export class KnowledgeComponent {
       subtitle: 'Conocimientos en el desarrollo con Java',
       description:
         'Conocimientos en el desarrollo con Java 21 y algoritmos para desarrollo de escritorio.',
-      routerLink: '/exp-0',
+      routerLink: 'exp-0',
     },
     {
       imgBig: '/assets/tsjsLogo.png',
@@ -34,7 +34,7 @@ export class KnowledgeComponent {
       subtitle: 'Desarrollo usando lenguajes como Javascript y Typescript',
       description:
         'Programación tanto en Typescript como Javascript tanto para backend como frontend usando Node.js y librerías como Express.js, React o frameworks como Angular.',
-      routerLink: '/exp-1',
+      routerLink: 'exp-1',
     },
     {
       imgBig: '/assets/angLogo.png',
@@ -46,7 +46,7 @@ export class KnowledgeComponent {
         'Conocimientos y experiencias desarrollando páginas usando Angular 18',
       description:
         'Experiencia creando páginas web usando Angular 18 y Node.js con npm/pnpm.',
-      routerLink: '/exp-2',
+      routerLink: 'exp-2',
     },
     {
       imgBig: '/assets/ubudebLogo.png',
@@ -58,7 +58,7 @@ export class KnowledgeComponent {
         'Conocimientos y experiencia en la creación de servidores basados en Linux',
       description:
         'Experiencia en sistemas Linux ( Debian, Ubuntu y Ubuntu Server, etc)',
-      routerLink: '/exp-3',
+      routerLink: 'exp-3',
     },
     {
       imgBig: '/assets/vmLogo.png',
@@ -69,7 +69,18 @@ export class KnowledgeComponent {
       subtitle: 'Uso de VMWare, VirtualBox y Qemu',
       description:
         'Experiencia utilizado máquinas virtuales como VMWare, VirtualBox y QEMU/KVM',
-      routerLink: '/exp-4',
+      routerLink: 'exp-4',
+    },
+    {
+      imgBig: '/assets/gitLogo.png',
+      imgBigAlt: 'Logo Git',
+      imgSmall: '/assets/sm/vmSmallLogo.png',
+      imgSmallAlt: 'Mini logo VMs',
+      mainTitle: 'Git',
+      subtitle: 'Conocimiento de control de versiones usando Git',
+      description:
+        ' Uso de Git y GitFlow para el versionamiento y tabajo continuo',
+      routerLink: 'exp-4',
     },
   ];
 }

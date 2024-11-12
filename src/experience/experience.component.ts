@@ -21,7 +21,7 @@ export class ExperienceComponent {
       mainTitle: 'Administrador de sistemas',
       subtitle: 'TELEPALMA S.L - La Palma del Condado, Huelva - 2020',
       description: 'Programador de sistemas de fibra óptica basados en Linux.',
-      routerLink: '/exp-0',
+      routerLink: 'exp-0',
     },
     {
       imgBig: '/assets/ccarmenLogo.png',
@@ -32,7 +32,7 @@ export class ExperienceComponent {
       subtitle: 'CONFITERÍA DEL CARMEN, La Palma del Condado, Huelva - 2021',
       description:
         'Desarrollador de página web de ventas en Wordpress y camarero sirviendo cafés y desayunos.',
-      routerLink: '/exp-1',
+      routerLink: 'exp-1',
     },
     {
       imgBig: '/assets/tmbrLogo.png',
@@ -43,7 +43,7 @@ export class ExperienceComponent {
       subtitle: 'TIMBERFILMS - Sevilla - 2022',
       description:
         'Rigger de personajes, creador de sistemas de movimiento para personajes 3D, y encargado del departamento de VFX y desarrollo técnico.',
-      routerLink: '/exp-2',
+      routerLink: 'exp-2',
     },
     {
       imgBig: '/assets/andreaPic.png',
@@ -54,7 +54,7 @@ export class ExperienceComponent {
       subtitle: 'TELEPALMA S.L - La Palma del Condado, Huelva - 2023',
       description:
         'Director, programador y editor de vídeo en un proyecto de realidad virtual 3D.',
-      routerLink: '/exp-3',
+      routerLink: 'exp-3',
     },
     {
       imgBig: '/assets/guadalinfoPic.png',
@@ -65,7 +65,7 @@ export class ExperienceComponent {
       subtitle: 'GUADALINFO - La Palma del Condado, Huelva - 2023',
       description:
         'Profesor de cursos de ofimática tanto para adultos como niños, y ayudante de gestiones administrativas a múltiples entidades.',
-      routerLink: '/exp-4',
+      routerLink: 'exp-4',
     },
   ];
 }
