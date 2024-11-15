@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["scroll/scroll.component.html"],"sourcesContent":["<div class=\"scroll-indicator\" *ngIf=\"!hasScrolled\">\r\n  <span class=\"scroll-text title is-4 has-text-black\">Scroll</span>\r\n  <div class=\"arrow-down\"></div>\r\n</div>\r\n"],"file":"scroll.component.html.gz"}

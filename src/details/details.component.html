@@ -1,8 +1,44 @@
-<div *ngFor="let detail of DetailsInfo">
-  <div
-    class="container is-widescreen fixed-grid has-3-cols has-1-cols-mobile p-4"
-  >
-    <p class="title is-1 has-text-black">{{ detail.title }}</p>
-    <hr />
+<section class="hero is-fullheight is-default is-bold">
+  <div class="hero-body" data-aos="fade-in">
+    <div class="container has-text-centered">
+      <div *ngIf="Details && Index !== undefined">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <figure class="image">
+              <img
+                src="{{ Details[Index].image }}"
+                alt="{{ Details[Index].imageAlt }}"
+              />
+            </figure>
+          </div>
+          <div class="column is-6 is-offset-1">
+            <h1 class="title is-2 has-text-black">
+              {{ Details[Index].title }}
+            </h1>
+            <h2 class="subtitle is-4">
+              {{ Details[Index].subtitle }}
+            </h2>
+            <p class="subtitle is-5 has-text-black">
+              {{ Details[Index].description }}
+            </p>
+            <hr class="separator" />
+            <div class="notification">
+              <p class="description has-text-white">
+                {{ Details[Index].descriptionSubject }}
+              </p>
+            </div>
+            <br />
+            <p class="has-text-centered">
+              <a
+                [routerLink]="[baseRoute]"
+                routerLinkActive="router-link-active"
+                class="button is-medium is-danger"
+                >Volver atrás</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>

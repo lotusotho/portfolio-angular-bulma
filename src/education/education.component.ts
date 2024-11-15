@@ -25,9 +25,9 @@ export class EducationComponent {
       smallTitle: 'DAW',
       description:
         'ADA-ITS - Sevilla, 2024 - Ahora. Desarrollo de Aplicaciones Web',
-      id: 'exp-0',
+      id: 'edu-0',
       imageUrl: '/assets/adaitsLogo.png',
-      routerLink: '/exp-0',
+      routerLink: 'edu-0',
     },
     {
       timestamp: new Date('2020-09-01'),
@@ -35,9 +35,9 @@ export class EducationComponent {
       smallTitle: 'A3D',
       description:
         'CENTRO UNIVERSITARIO EUSA - Sevilla, 2020-2022. Animación 3D, Juegos y Entornos Interactivos',
-      id: 'exp-1',
+      id: 'edu-1',
       imageUrl: '/assets/eusaLogo.png',
-      routerLink: '/exp-1',
+      routerLink: 'edu-1',
     },
     {
       timestamp: new Date('2017-09-01'),
@@ -45,9 +45,9 @@ export class EducationComponent {
       smallTitle: 'SMR',
       description:
         'IES DELGADO HERNÁNDEZ, Bollullos Par Del Condado - 2017-2019. Sistemas Microinformáticos y Redes',
-      id: 'exp-2',
+      id: 'edu-2',
       imageUrl: '/assets/dhPic.png',
-      routerLink: '/exp-2',
+      routerLink: 'edu-2',
     },
   ];
 

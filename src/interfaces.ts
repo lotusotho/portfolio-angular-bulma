@@ -21,6 +21,9 @@ export interface Home {
 export interface Details {
   title: string;
   image: string;
+  imageAlt: string;
+  subtitle: string;
   description: string;
+  descriptionSubject: string;
   routerLink: string;
 }

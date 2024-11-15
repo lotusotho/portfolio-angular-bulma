@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NgxTypedWriterModule } from 'ngx-typed-writer';
 import { Home } from '../interfaces';
 
@@ -31,5 +31,24 @@ export class HomeComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.hasScrolled = window.scrollY > 0;
+  }
+
+  showToast() {
+    const toast = document.createElement('div');
+    toast.className = 'toast notification is-success title is-5 has-text-black';
+    toast.style.position = 'fixed';
+    toast.style.top = '10%';
+    toast.style.left = '50%';
+    toast.style.transform = 'translate(-50%, -50%)';
+    toast.style.zIndex = '1000';
+    toast.style.padding = '10px';
+    toast.style.border = '2px solid #6effbe';
+    toast.innerText = '¡Gracias! 😄👍';
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+      toast.remove();
+    }, 3000);
   }
 }

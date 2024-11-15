@@ -4,8 +4,8 @@ import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
+import compression from 'compression';
 
-// The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
@@ -17,15 +17,37 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
-  // Serve static files from /browser
-  server.get('**', express.static(browserDistFolder, {
-    maxAge: '1y',
-    index: 'index.html',
-  }));
+  // Añadir middleware de compresión
+  server.use(compression());
 
-  // All regular routes use the Angular engine
+  // Middleware para servir archivos estáticos comprimidos
+  server.get('*.js', (req, res, next) => {
+    req.url = req.url + '.gz';
+    res.set('Content-Encoding', 'gzip');
+    res.set('Content-Type', 'application/javascript');
+    next();
+  });
+
+  server.get('*.css', (req, res, next) => {
+    req.url = req.url + '.gz';
+    res.set('Content-Encoding', 'gzip');
+    res.set('Content-Type', 'text/css');
+    next();
+  });
+
+  // API de ejemplo
+  // server.get('/api/**', (req, res) => { });
+
+  // Servir archivos estáticos desde `browser`
+  server.get(
+    '**',
+    express.static(browserDistFolder, {
+      maxAge: '1y',
+      index: 'index.html',
+    })
+  );
+
+  // Rutas que usan el motor de Angular
   server.get('**', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
 
@@ -47,7 +69,6 @@ export function app(): express.Express {
 function run(): void {
   const port = process.env['PORT'] || 4000;
 
-  // Start up the Node server
   const server = app();
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
