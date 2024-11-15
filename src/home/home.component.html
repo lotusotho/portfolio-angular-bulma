@@ -3,14 +3,14 @@
     <div class="container has-text-centered">
       <p class="title is-1" data-aos="fade-down">{{ home.title }}</p>
       <p class="subtitle" data-aos="fade-in">{{ home.pageDescription }}</p>
-      <figure data-aos="fade-in">
-        <img
-          class="pfp-image"
-          src="{{ home.imgPfp }}"
-          alt="{{ home.imgPfpAlt }}"
-        />
-      </figure>
-      <div data-aos="fade-up">
+      <div data-aos="fade-in">
+        <figure>
+          <img
+            class="pfp-image"
+            src="{{ home.imgPfp }}"
+            alt="{{ home.imgPfpAlt }}"
+          />
+        </figure>
         <p class="title is-3">
           es un
           <ngx-typed-writer
