@@ -1,38 +1,40 @@
 <section class="hero is-white is-fullheight-with-navbar">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <p class="title is-1" data-aos="fade-up">{{ home.title }}</p>
-      <p class="subtitle" data-aos="fade-up">{{ home.pageDescription }}</p>
-      <figure data-aos="fade-up">
-        <img
-          class="pfp-image"
-          src="{{ home.imgPfp }}"
-          alt="{{ home.imgPfpAlt }}"
-        />
-      </figure>
-      <p class="title is-3">
-        es un
-        <ngx-typed-writer
-          class="typewriter"
-          [strings]="home.phrases"
-          [shuffle]="true"
-          [isHTML]="true"
-          [backSpeed]="20"
-          [typeSpeed]="30"
+      <p class="title is-1" data-aos="fade-down">{{ home.title }}</p>
+      <p class="subtitle" data-aos="fade-in">{{ home.pageDescription }}</p>
+      <div data-aos="fade-up">
+        <figure>
+          <img
+            class="pfp-image"
+            src="{{ home.imgPfp }}"
+            alt="{{ home.imgPfpAlt }}"
+          />
+        </figure>
+        <p class="title is-3">
+          es un
+          <ngx-typed-writer
+            class="typewriter"
+            [strings]="home.phrases"
+            [shuffle]="true"
+            [isHTML]="true"
+            [backSpeed]="20"
+            [typeSpeed]="30"
+          >
+          </ngx-typed-writer>
+        </p>
+        <a
+          href="https://drive.google.com/file/d/101wqVS622fxIvwle3D57HvTfwjzielyZ/view?usp=sharing"
+          target="_blank"
+          class="button is-medium is-info is-light"
+          (click)="showToast()"
+          >Ver Currículum</a
         >
-        </ngx-typed-writer>
-      </p>
-      <a
-        href="https://drive.google.com/file/d/101wqVS622fxIvwle3D57HvTfwjzielyZ/view?usp=sharing"
-        target="_blank"
-        class="button is-medium is-info is-light"
-        (click)="showToast()"
-        >Ver Currículum</a
-      >
-      <p class="title is-3">Descripción personal:</p>
-      <p class="notification container is-fluid" data-aos="zoom-in">
-        {{ home.description }}
-      </p>
+        <p class="title is-3">Descripción personal:</p>
+        <p class="notification container is-fluid">
+          {{ home.description }}
+        </p>
+      </div>
     </div>
   </div>
 </section>
