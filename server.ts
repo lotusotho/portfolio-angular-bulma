@@ -5,7 +5,6 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
 import compression from 'compression';
-import mime from 'mime';
 
 export function app(): express.Express {
   const server = express();
@@ -22,18 +21,22 @@ export function app(): express.Express {
   server.use(compression());
 
   // Middleware para servir archivos estáticos comprimidos
-  server.get('*.*', (req, res, next) => {
-    const gzippedUrl = req.url + '.gz';
-    const mimeType = mime.getType(req.url);
-
-    if (mimeType) {
-      res.set('Content-Type', mimeType);
-    }
-
+  server.get('*.js', (req, res, next) => {
+    req.url = req.url + '.gz';
     res.set('Content-Encoding', 'gzip');
-    req.url = gzippedUrl;
+    res.set('Content-Type', 'application/javascript');
     next();
   });
+
+  server.get('*.css', (req, res, next) => {
+    req.url = req.url + '.gz';
+    res.set('Content-Encoding', 'gzip');
+    res.set('Content-Type', 'text/css');
+    next();
+  });
+
+  // API de ejemplo
+  // server.get('/api/**', (req, res) => { });
 
   // Servir archivos estáticos desde `browser`
   server.get(
