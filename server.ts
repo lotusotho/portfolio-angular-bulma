@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
 import compression from 'compression';
+import xmlbuilder from 'xmlbuilder';
+import { routes } from './src/app/app.routes';
 
 export function app(): express.Express {
   const server = express();
@@ -35,8 +37,25 @@ export function app(): express.Express {
     next();
   });
 
-  // API de ejemplo
-  // server.get('/api/**', (req, res) => { });
+  // Crear sitemap dinámico usando las rutas de Angular
+  server.get('/sitemap.xml', (req, res) => {
+    const root = xmlbuilder.create('urlset', {
+      version: '1.0',
+      encoding: 'UTF-8',
+    });
+    root.att('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
+
+    // Iterar sobre las rutas definidas en Angular
+    routes.forEach((route) => {
+      if (route.path) {
+        const url = root.ele('url');
+        url.ele('loc', `https://mapach.es/${route.path}`);
+      }
+    });
+
+    res.header('Content-Type', 'application/xml');
+    res.send(root.end({ pretty: true }));
+  });
 
   // Servir archivos estáticos desde `browser`
   server.get(
