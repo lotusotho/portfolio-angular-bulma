@@ -1,27 +1,127 @@
-# PortfolioAngularBulma
+# Portfolio Alejandro Ramos 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+# <center>🦝 MAPACH.ES 🦝</center>
 
-## Development server
+Este es un proyecto de portafolio personal creado utilizando **Angular 18** y el framework de diseño **BulmaCSS**. El objetivo del proyecto es ofrecer una plataforma visualmente atractiva, rápida y responsive para mostrar habilidades, experiencia y proyectos personales de manera profesional.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tabla de Contenidos
 
-## Code scaffolding
+- [Portfolio Alejandro Ramos](#portfolio-alejandro-ramos)
+- [🦝 MAPACH.ES 🦝](#-mapaches-)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
+  - [Descripción del Proyecto](#descripción-del-proyecto)
+  - [Requisitos Previos](#requisitos-previos)
+  - [Instalación](#instalación)
+  - [Scripts Disponibles](#scripts-disponibles)
+  - [Despliegue](#despliegue)
+    - [Desarrollo Local](#desarrollo-local)
+    - [Producción con SSR](#producción-con-ssr)
+  - [Detalles Técnicos](#detalles-técnicos)
+    - [Tecnologías Utilizadas](#tecnologías-utilizadas)
+    - [Estructura del Proyecto](#estructura-del-proyecto)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## Descripción del Proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Este proyecto tiene como propósito:
+- Mostrar información personal, experiencia laboral, habilidades y proyectos.
+- Proveer una experiencia fluida mediante animaciones (usando **AOS**) y diseño moderno gracias a **BulmaCSS**.
+- Soportar renderizado del lado del servidor (**SSR**) para mejorar la velocidad de carga y el SEO.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Requisitos Previos
 
-## Running end-to-end tests
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Node.js** (versión 18 o superior)
+- **pnpm**
+- **Angular CLI** (`pnpm install -g @angular/cli`)
+- **Gulp CLI** (`pnpm install -g gulp`)
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Instalación
+
+1. **Clona el repositorio:**
+
+   ```bash
+   git clone https://github.com/lotusotho/portfolio-angular-bulma.git
+   cd portfolio-angular-bulma
+   ```
+
+2. **Instala las dependencias:**
+
+   ```bash
+   pnpm install
+   ```
+
+3. **Configura el proyecto si es necesario:**  
+   Modifica archivos como `environment.ts` o `angular.json` según sea necesario para tu entorno.
+
+---
+
+## Scripts Disponibles
+
+En el archivo `package.json`, hay varios scripts configurados para diferentes tareas:
+
+- **`pnpm start`**  
+  Inicia el servidor de desarrollo. El proyecto estará disponible en `http://localhost:4200`.
+
+- **`pnpm run build`**  
+  Construye la versión optimizada para producción.
+
+- **`pnpm run postbuild`**  
+  Verifica el código con lint y comprime los archivos de producción usando **Gulp**.
+
+- **`pnpm run serve:ssr:portfolio-angular-bulma`**  
+  Sirve la aplicación usando renderizado del lado del servidor (SSR).  
+
+  **Nota:** Necesitas haber ejecutado `pnpm run build` previamente para generar los archivos en la carpeta `dist`.
+
+- **`pnpm run serve:compressed`**  
+  Inicia el servidor de desarrollo mientras observa los cambios y aplica compresión automática con **Gulp**.
+
+- **`pnpm run lint`**  
+  Ejecuta análisis estático del código con **Angular ESLint**.
+
+---
+
+## Despliegue
+
+### Desarrollo Local
+1. Para ejecutar la aplicación en un entorno de desarrollo:
+   ```bash
+   pnpm start
+   ```
+   Luego, abre tu navegador en [http://localhost:4200](http://localhost:4200).
+
+### Producción con SSR
+1. Construye la aplicación para producción:
+   ```bash
+   pnpm run build
+   ```
+
+2. Sirve la aplicación:
+   ```bash
+   pnpm run serve:ssr:portfolio-angular-bulma
+   ```
+
+3. Accede a la aplicación en [http://localhost:4000](http://localhost:4000).
+
+---
+
+## Detalles Técnicos
+
+### Tecnologías Utilizadas
+- **Angular 18**: Framework para construir aplicaciones web modernas.
+- **BulmaCSS**: Framework CSS para diseño responsivo y atractivo.
+- **AOS (Animate on Scroll)**: Librería para animaciones al hacer scroll.
+- **SSR (Server-Side Rendering)**: Mejoras en SEO y tiempos de carga.
+
+### Estructura del Proyecto
+El código sigue la arquitectura modular de Angular:
+- **`src/app`**: Contiene los componentes principales como Navbar, Home, Experience, etc.
+- **`src/assets`**: Contiene imágenes, estilos y otros recursos estáticos.
+- **`gulpfile.js`**: Configuración de tareas Gulp para compresión.
