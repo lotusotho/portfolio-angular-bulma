@@ -1,6 +1,6 @@
 # Portfolio Alejandro Ramos 
 
-# <center>🦝 MAPACH.ES 🦝</center>
+<h1 align="center">🦝 MAPACH.ES 🦝</h1>
 
 Este es un proyecto de portafolio personal creado utilizando **Angular 18** y el framework de diseño **BulmaCSS**. El objetivo del proyecto es ofrecer una plataforma visualmente atractiva, rápida y responsive para mostrar habilidades, experiencia y proyectos personales de manera profesional.
 
