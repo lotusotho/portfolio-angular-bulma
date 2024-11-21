@@ -1,10 +1,12 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet, RouterLink } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, FontAwesomeModule],
   selector: 'app-navbar',
   templateUrl: 'navbar.component.html',
   styleUrl: 'navbar.component.css',
@@ -19,6 +21,15 @@ export class NavbarComponent implements OnInit {
           document.querySelectorAll('.navbar-burger')
         );
 
+        const $navbarMenus = Array.from(
+          document.querySelectorAll('.navbar-menu')
+        );
+
+        const $dropdowns = Array.from(
+          document.querySelectorAll('.navbar-item.has-dropdown')
+        );
+
+        // Toggle navbar-burger
         $navbarBurgers.forEach((el) => {
           el.addEventListener('click', () => {
             const target = el.getAttribute('data-target');
@@ -29,25 +40,40 @@ export class NavbarComponent implements OnInit {
           });
         });
 
-        const $menuLinks = Array.from(
-          document.querySelectorAll('.navbar-menu a')
-        );
+        // Close navbar on outside click
+        document.addEventListener('click', (event) => {
+          const targetElement = event.target as Node;
 
-        $menuLinks.forEach((link) => {
-          link.addEventListener('click', () => {
-            const $navbarBurgers = Array.from(
-              document.querySelectorAll('.navbar-burger')
-            );
-            $navbarBurgers.forEach((burger) => {
-              burger.classList.remove('is-active');
-            });
+          // Close burger if clicked outside of navbar and dropdown
+          const isClickInsideDropdown = $dropdowns.some((dropdown) =>
+            dropdown.contains(targetElement)
+          );
 
-            const $navbarMenus = Array.from(
-              document.querySelectorAll('.navbar-menu')
+          const isClickInsideNavbarBurger = $navbarBurgers.some((burger) =>
+            burger.contains(targetElement)
+          );
+
+          if (!isClickInsideDropdown && !isClickInsideNavbarBurger) {
+            $navbarBurgers.forEach((burger) =>
+              burger.classList.remove('is-active')
             );
-            $navbarMenus.forEach((menu) => {
-              menu.classList.remove('is-active');
-            });
+            $navbarMenus.forEach((menu) => menu.classList.remove('is-active'));
+          }
+        });
+
+        // Toggle dropdown
+        $dropdowns.forEach((dropdown) => {
+          const $dropdownLink = dropdown.querySelector('.navbar-link');
+
+          $dropdownLink?.addEventListener('click', (event) => {
+            event.preventDefault();
+            dropdown.classList.toggle('is-active');
+          });
+
+          document.addEventListener('click', (event) => {
+            if (!dropdown.contains(event.target as Node)) {
+              dropdown.classList.remove('is-active');
+            }
           });
         });
       });
@@ -72,4 +98,6 @@ export class NavbarComponent implements OnInit {
       toast.remove();
     }, 3000);
   }
+
+  githubIcon = faGithubAlt;
 }

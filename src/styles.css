@@ -2,42 +2,50 @@
   font-family: "Outfit";
   font-weight: 100;
   font-style: normal;
-  src: url(/assets/font/Outfit-Thin.woff2) format("opentype");
+  src: url(/assets/font/Outfit-Thin.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Outfit";
   font-weight: 300;
   font-style: normal;
-  src: url(/assets/font/Outfit-Light.woff2) format("opentype");
+  src: url(/assets/font/Outfit-Light.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Outfit";
   font-weight: 400;
   font-style: normal;
-  src: url(/assets/font/Outfit-Regular.woff2) format("opentype");
+  src: url(/assets/font/Outfit-Regular.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Outfit";
   font-weight: 500;
   font-style: normal;
-  src: url(/assets/font/Outfit-Medium.woff2) format("opentype");
+  src: url(/assets/font/Outfit-Medium.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Outfit";
   font-weight: 700;
   font-style: normal;
-  src: url(/assets/font/Outfit-Bold.woff2) format("opentype");
+  src: url(/assets/font/Outfit-Bold.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Outfit";
   font-weight: 900;
   font-style: normal;
-  src: url(/assets/font/Outfit-Black.woff2) format("opentype");
+  src: url(/assets/font/Outfit-Black.woff2) format("woff2");
+}
+
+/* Nerd Fonts Symbols */
+@font-face {
+  font-family: "SymbolsNerdFonts";
+  font-weight: 100;
+  font-style: normal;
+  src: url(/assets/font/SymbolsNerdFont-Regular.woff2) format("woff2");
 }
 
 * {
