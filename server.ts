@@ -32,6 +32,13 @@ export function app(): express.Express {
     next();
   });
 
+  server.get('*.css', (req, res, next) => {
+    req.url = req.url + '.gz';
+    res.set('Content-Encoding', 'gzip');
+    res.set('Content-Type', 'text/css');
+    next();
+  });
+
   // Rutas que usan el motor de Angular
   server.get('**', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
