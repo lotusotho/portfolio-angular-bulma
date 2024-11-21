@@ -20,7 +20,7 @@ const xml = root.end({ pretty: true });
 const __dirname = path
   .dirname(decodeURI(new URL(import.meta.url).pathname))
   .substring(1);
-const outputPath = path.resolve(__dirname, "public", "sitemap.xml");
+const outputPath = path.resolve(__dirname, "../public", "sitemap.xml");
 
 // Crear el directorio si no existe
 const outputDir = path.dirname(outputPath);
