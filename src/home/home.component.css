@@ -12,8 +12,16 @@
   border: 3px solid black;
 }
 
-@media (min-width: 1024px) {
-  .scroll-indicator {
-    display: none;
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadein {
+  animation: fadeIn 0.3s ease-in-out;
 }
