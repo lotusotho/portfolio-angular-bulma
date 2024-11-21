@@ -1,6 +1,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a
+      #navLogo
       role="button"
       tabindex="0"
       (click)="toggleLogo()"
@@ -129,20 +130,27 @@
           <b>LinkedIn</b>
           <fa-icon [icon]="linkedinIcon" [size]="'lg'"></fa-icon>
         </a>
-        <div class="navbar-item has-background-black has-dropdown">
-          <a href="#" class="navbar-link has-text-white"
+        <div
+          #navDropdown
+          role="button"
+          tabindex="0"
+          (click)="toggleDropdown()"
+          (keydown.enter)="toggleDropdown()"
+          class="navbar-item has-background-black has-dropdown"
+        >
+          <a class="navbar-link has-text-white"
             >GitHub <fa-icon [icon]="githubIcon" [size]="'lg'"></fa-icon>
           </a>
           <div class="navbar-dropdown is-right">
             <a
-              class="navbar-item has-text-white has-background-black"
+              class="navbar-item has-text-white has-background-black is-size-6"
               href="https://github.com/lotusotho/portfolio-angular-bulma"
               target="_blank"
             >
               Proyecto Portfolio
             </a>
             <a
-              class="navbar-item has-text-white has-background-black"
+              class="navbar-item has-text-white has-background-black is-size-6"
               href="https://github.com/lotusotho"
               target="_blank"
             >

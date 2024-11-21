@@ -1,4 +1,12 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Inject,
+  PLATFORM_ID,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -11,6 +19,7 @@ import {
   faStar,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   standalone: true,
@@ -20,9 +29,12 @@ import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
   styleUrl: 'navbar.component.css',
 })
 export class NavbarComponent {
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+
   @ViewChild('navLogo') navLogo!: ElementRef;
   @ViewChild('navBurger') navBurger!: ElementRef;
   @ViewChild('navMenu') navMenu!: ElementRef;
+  @ViewChild('navDropdown') navDropdown!: ElementRef;
 
   toggleNavbar() {
     this.navBurger.nativeElement.classList.toggle('is-active');
@@ -32,6 +44,26 @@ export class NavbarComponent {
   toggleLogo() {
     this.navBurger.nativeElement.classList.remove('is-active');
     this.navMenu.nativeElement.classList.remove('is-active');
+  }
+
+  toggleDropdown() {
+    this.navDropdown.nativeElement.classList.toggle('is-active');
+    this.navBurger.nativeElement.classList.remove('is-active');
+    this.navMenu.nativeElement.classList.remove('is-active');
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    const targetElement = event.target as HTMLElement;
+
+    const isClickInsideDropdown =
+      this.navDropdown.nativeElement.contains(targetElement);
+
+    if (!isClickInsideDropdown) {
+      this.navDropdown.nativeElement.classList.remove('is-active');
+    }
   }
 
   showToast() {
