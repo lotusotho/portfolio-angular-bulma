@@ -22,7 +22,21 @@ export function app(): express.Express {
   server.use(compression());
 
   // Servir archivos estáticos desde el directorio 'compressed'
-  server.use('/static', express.static(path.join(__dirname, 'compressed')));
+  server.use(
+    '/static',
+    express.static(path.join(__dirname, 'compressed'), {
+      setHeaders: (res, path) => {
+        if (path.endsWith('.gz')) {
+          res.setHeader('Content-Encoding', 'gzip');
+          if (path.endsWith('.js.gz')) {
+            res.setHeader('Content-Type', 'application/javascript');
+          } else if (path.endsWith('.css.gz')) {
+            res.setHeader('Content-Type', 'text/css');
+          }
+        }
+      },
+    })
+  );
 
   // Middleware para servir archivos estáticos comprimidos
   server.get('*.js', (req, res, next) => {
