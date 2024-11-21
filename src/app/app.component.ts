@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, ngOnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -11,10 +11,10 @@ import AOS from 'aos';
   imports: [RouterOutlet, NavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements ngOnInit {
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       document.addEventListener('DOMContentLoaded', () => {
         console.log('doc loaded');
