@@ -33,7 +33,7 @@ Este proyecto tiene como propósito:
 
 ---
 ## Acceso a la Web
-Se puede acceder de dos manera al portfolio:
+Se puede acceder de dos maneras a la web:
 1. <a href="https://mapach.es">mapach.es</a>
 2. <a href="https://alejandroramos.vercel.app">alejandroramos.vercel.app</a>
 
