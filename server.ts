@@ -1,6 +1,7 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { CommonEngine } from '@angular/ssr';
 import express from 'express';
+import * as path from 'path';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
@@ -20,6 +21,9 @@ export function app(): express.Express {
   // Añadir middleware de compresión
   server.use(compression());
 
+  // Servir archivos estáticos desde el directorio 'compressed'
+  server.use('/static', express.static(path.join(__dirname, 'compressed')));
+
   // Middleware para servir archivos estáticos comprimidos
   server.get('*.js', (req, res, next) => {
     req.url = req.url + '.gz';
@@ -27,25 +31,6 @@ export function app(): express.Express {
     res.set('Content-Type', 'application/javascript');
     next();
   });
-
-  server.get('*.css', (req, res, next) => {
-    req.url = req.url + '.gz';
-    res.set('Content-Encoding', 'gzip');
-    res.set('Content-Type', 'text/css');
-    next();
-  });
-
-  // API de ejemplo
-  // server.get('/api/**', (req, res) => { });
-
-  // Servir archivos estáticos desde `browser`
-  server.get(
-    '**',
-    express.static(browserDistFolder, {
-      maxAge: '1y',
-      index: 'index.html',
-    })
-  );
 
   // Rutas que usan el motor de Angular
   server.get('**', (req, res, next) => {
