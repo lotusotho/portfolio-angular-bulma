@@ -43,6 +43,3 @@ Thumbs.db
 
 # gulp
 /compressed
-
-# sitemap
-/public/sitemap.xml
