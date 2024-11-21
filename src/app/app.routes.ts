@@ -32,6 +32,11 @@ const knowledgeRoutes = KnowledgeDetails.map((detail: Details, index) => ({
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
     component: NavbarComponent,
     children: [
       {
