@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node tools/generate-sitemap.mjs && ng serve",
     "build": "ng build",
     "postbuild": "ng lint && gulp compress && node tools/generate-sitemap.mjs",
     "watch": "ng build --watch --configuration development",
