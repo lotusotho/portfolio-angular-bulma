@@ -4,7 +4,6 @@ import {
   HostListener,
   Inject,
   PLATFORM_ID,
-  Renderer2,
   ViewChild,
 } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
