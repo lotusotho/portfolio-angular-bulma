@@ -1,5 +1,4 @@
-import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -20,73 +19,13 @@ import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
   templateUrl: 'navbar.component.html',
   styleUrl: 'navbar.component.css',
 })
-export class NavbarComponent implements OnInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+export class NavbarComponent {
+  @ViewChild('navBurger') navBurger!: ElementRef;
+  @ViewChild('navMenu') navMenu!: ElementRef;
 
-  ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      document.addEventListener('DOMContentLoaded', () => {
-        const $navbarBurgers = Array.from(
-          document.querySelectorAll('.navbar-burger')
-        );
-
-        const $navbarMenus = Array.from(
-          document.querySelectorAll('.navbar-menu')
-        );
-
-        const $dropdowns = Array.from(
-          document.querySelectorAll('.navbar-item.has-dropdown')
-        );
-
-        // Toggle navbar-burger
-        $navbarBurgers.forEach((el) => {
-          el.addEventListener('click', () => {
-            const target = el.getAttribute('data-target');
-            const $target = document.getElementById(target!);
-
-            el.classList.toggle('is-active');
-            $target?.classList.toggle('is-active');
-          });
-        });
-
-        // Close navbar on outside click
-        document.addEventListener('click', (event) => {
-          const targetElement = event.target as Node;
-
-          // Close burger if clicked outside of navbar and dropdown
-          const isClickInsideDropdown = $dropdowns.some((dropdown) =>
-            dropdown.contains(targetElement)
-          );
-
-          const isClickInsideNavbarBurger = $navbarBurgers.some((burger) =>
-            burger.contains(targetElement)
-          );
-
-          if (!isClickInsideDropdown && !isClickInsideNavbarBurger) {
-            $navbarBurgers.forEach((burger) =>
-              burger.classList.remove('is-active')
-            );
-            $navbarMenus.forEach((menu) => menu.classList.remove('is-active'));
-          }
-        });
-
-        // Toggle dropdown
-        $dropdowns.forEach((dropdown) => {
-          const $dropdownLink = dropdown.querySelector('.navbar-link');
-
-          $dropdownLink?.addEventListener('click', (event) => {
-            event.preventDefault();
-            dropdown.classList.toggle('is-active');
-          });
-
-          document.addEventListener('click', (event) => {
-            if (!dropdown.contains(event.target as Node)) {
-              dropdown.classList.remove('is-active');
-            }
-          });
-        });
-      });
-    }
+  toggleNavbar() {
+    this.navBurger.nativeElement.classList.toggle('is-active');
+    this.navMenu.nativeElement.classList.toggle('is-active');
   }
 
   showToast() {

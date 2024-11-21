@@ -27,6 +27,8 @@
     </a>
 
     <a
+      (click)="toggleNavbar()"
+      #navBurger
       role="button"
       class="navbar-burger"
       aria-label="menu"
@@ -40,7 +42,7 @@
     </a>
   </div>
 
-  <div id="navbarBurgerId" class="navbar-menu">
+  <div (click)="toggleNavbar()" #navMenu class="navbar-menu">
     <div class="navbar-start">
       <a
         class="navbar-item"
@@ -114,7 +116,8 @@
           <fa-icon [icon]="linkedinIcon" [size]="'lg'"></fa-icon>
         </a>
         <div
-          id="navbarDropdownId"
+          (click)="toggleNavbar()"
+          #navDropdown
           class="navbar-item has-background-black has-dropdown"
         >
           <a href="#" class="navbar-link has-text-white"
