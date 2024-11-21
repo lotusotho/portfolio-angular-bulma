@@ -11,7 +11,7 @@ import {
   faQuestion,
   faStar,
 } from '@fortawesome/free-solid-svg-icons';
-import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   standalone: true,
@@ -117,4 +117,5 @@ export class NavbarComponent implements OnInit {
   cotactIcon = faAt;
   cvIcon = faIdCard;
   githubIcon = faGithubAlt;
+  linkedinIcon = faLinkedin;
 }
