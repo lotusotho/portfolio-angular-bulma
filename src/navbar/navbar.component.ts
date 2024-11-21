@@ -2,6 +2,15 @@ import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {
+  faAt,
+  faAtom,
+  faBook,
+  faHouse,
+  faIdCard,
+  faQuestion,
+  faStar,
+} from '@fortawesome/free-solid-svg-icons';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -99,5 +108,13 @@ export class NavbarComponent implements OnInit {
     }, 3000);
   }
 
+  // Icons
+  homeIcon = faHouse;
+  expIcon = faStar;
+  eduIcon = faBook;
+  knowIcon = faAtom;
+  aboutIcon = faQuestion;
+  cotactIcon = faAt;
+  cvIcon = faIdCard;
   githubIcon = faGithubAlt;
 }

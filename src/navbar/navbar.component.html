@@ -47,6 +47,7 @@
         [routerLink]="['/home']"
         routerLinkActive="router-link-active"
       >
+        <fa-icon [icon]="homeIcon" [size]="'lg'"></fa-icon>
         Inicio
       </a>
 
@@ -55,6 +56,7 @@
         [routerLink]="['/experience']"
         routerLinkActive="router-link-active"
       >
+        <fa-icon [icon]="expIcon" [size]="'lg'"></fa-icon>
         Experiencia
       </a>
 
@@ -63,6 +65,7 @@
         [routerLink]="['/education']"
         routerLinkActive="router-link-active"
       >
+        <fa-icon [icon]="eduIcon" [size]="'lg'"></fa-icon>
         Educación
       </a>
 
@@ -71,6 +74,7 @@
         [routerLink]="['/knowledge']"
         routerLinkActive="router-link-active"
       >
+        <fa-icon [icon]="knowIcon" [size]="'lg'"></fa-icon>
         Conocimientos
       </a>
 
@@ -79,6 +83,7 @@
         [routerLink]="['/about']"
         routerLinkActive="router-link-active"
       >
+        <fa-icon [icon]="aboutIcon" [size]="'lg'"></fa-icon>
         Sobre esta página
       </a>
 
@@ -87,6 +92,7 @@
         [routerLink]="['/contact']"
         routerLinkActive="router-link-active"
       >
+        <fa-icon [icon]="cotactIcon" [size]="'lg'"></fa-icon>
         Contacto
       </a>
       <a
@@ -95,6 +101,7 @@
         target="_blank"
         (click)="showToast()"
       >
+        <fa-icon [icon]="cvIcon" [size]="'lg'"></fa-icon>
         Currículum Vitae
       </a>
       <div class="navbar-end">
@@ -103,8 +110,8 @@
           class="navbar-item has-background-black has-dropdown"
         >
           <a href="#" class="navbar-link has-text-white"
-            >GitHub <fa-icon [icon]="githubIcon" [size]="'lg'"></fa-icon
-          ></a>
+            >GitHub <fa-icon [icon]="githubIcon" [size]="'lg'"></fa-icon>
+          </a>
           <div class="navbar-dropdown is-right">
             <a
               class="navbar-item has-text-white has-background-black"
