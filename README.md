@@ -1,6 +1,6 @@
 # Portfolio Alejandro Ramos 
 
-<a align="center" href="https://mapach.es" style="font-size: 2em">🦝 <b>MAPACH.ES</b>🦝</a>
+<h1 align="center">🦝 <b>MAPACH.ES</b> 🦝</h1>
 
 Este es un proyecto de portafolio personal creado utilizando **Angular 18** y el framework de diseño **BulmaCSS**. El objetivo del proyecto es ofrecer una plataforma visualmente atractiva, rápida y responsive para mostrar habilidades, experiencia y proyectos personales de manera profesional.
 
@@ -32,8 +32,8 @@ Este proyecto tiene como propósito:
 ---
 ## Acceso a la Web
 Se puede acceder de dos manera al portfolio:
-1. <a href="https://mapach.es" style="font-size: 2em">mapach.es</a>
-2. <a href="https://alejandroramos.vercel.app" style="font-size: 2em">alejandroramos.vercel.app</a>
+1. <a href="https://mapach.es">mapach.es</a>
+2. <a href="https://alejandroramos.vercel.app">alejandroramos.vercel.app</a>
 
 ---
 
