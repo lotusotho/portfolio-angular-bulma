@@ -14,12 +14,9 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      document.addEventListener('DOMContentLoaded', () => {
-        console.log('doc loaded');
-        console.log('Page ready');
-        AOS.init();
-        AOS.refresh();
-      });
+      console.log('Page ready');
+      AOS.init();
+      AOS.refresh();
     }
   }
 }

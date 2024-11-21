@@ -4,25 +4,6 @@
   margin: 20px;
 }
 
-.scroll-indicator {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  cursor: pointer;
-  color: black;
-}
-
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 10px solid #000;
-  margin: 5px auto;
-}
-
 .typewriter {
   text-shadow: 3px 3px #cfcfcf;
 }
