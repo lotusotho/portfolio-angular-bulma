@@ -20,12 +20,18 @@ import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
   styleUrl: 'navbar.component.css',
 })
 export class NavbarComponent {
+  @ViewChild('navLogo') navLogo!: ElementRef;
   @ViewChild('navBurger') navBurger!: ElementRef;
   @ViewChild('navMenu') navMenu!: ElementRef;
 
   toggleNavbar() {
     this.navBurger.nativeElement.classList.toggle('is-active');
     this.navMenu.nativeElement.classList.toggle('is-active');
+  }
+
+  toggleLogo() {
+    this.navBurger.nativeElement.classList.remove('is-active');
+    this.navMenu.nativeElement.classList.remove('is-active');
   }
 
   showToast() {
