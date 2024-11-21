@@ -12,7 +12,7 @@ root.att("xmlns", "http://www.sitemaps.org/schemas/sitemap/0.9");
 routes.forEach((route) => {
   if (route.path) {
     const url = root.ele("url");
-    url.ele("loc", `https://mapach.es/${route.path}`);
+    url.ele("loc", `https://www.mapach.es/${route.path}`);
   }
 });
 

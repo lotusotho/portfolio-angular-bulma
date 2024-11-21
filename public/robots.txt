@@ -14,6 +14,10 @@ User-agent: Diffbot
 User-agent: DuckAssistBot
 User-agent: FacebookBot
 User-agent: facebookexternalhit
+User-agent: Google-Extended
+User-agent: GoogleOther
+User-agent: GoogleOther-Image
+User-agent: GoogleOther-Video
 User-agent: FriendlyCrawler
 User-agent: GPTBot
 User-agent: iaskspider/2.0
@@ -38,5 +42,5 @@ User-agent: YouBot
 Disallow: /
 User-agent: *
 Allow: /
-Sitemap: https://mapach.es/sitemap.xml
-Host: https://mapach.es
+Sitemap: https://www.mapach.es/sitemap.xml
+Host: https://www.mapach.es
