@@ -15,3 +15,9 @@
   flex-grow: 1;
   justify-content: center;
 }
+
+@media (max-width: 767px) {
+  fa-icon {
+    margin: 4px;
+  }
+}
