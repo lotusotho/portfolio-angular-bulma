@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["navbar/navbar.component.css"],"sourcesContent":[".arcSvg {\r\n  fill: white;\r\n}\r\n\r\n.logo:active .arcSvg {\r\n  fill-opacity: 0.5;\r\n}\r\n"],"file":"navbar.component.css.gz"}

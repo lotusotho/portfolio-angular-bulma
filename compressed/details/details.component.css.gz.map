@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["details/details.component.css"],"sourcesContent":["img {\r\n  width: 500px;\r\n  border: 4px solid black;\r\n  border-radius: 10px;\r\n  object-fit: cover;\r\n}\r\n\r\n.separator {\r\n  height: 3px;\r\n  border-radius: 10px;\r\n}\r\n"],"file":"details.component.css.gz"}
