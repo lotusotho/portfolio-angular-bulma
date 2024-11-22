@@ -4,6 +4,7 @@
   <hr />
 
   <div class="grid">
+    <!-- Initial Card -->
     <div class="card fadein">
       <div class="card-image">
         <figure class="image is-4by3">
@@ -46,6 +47,7 @@
         </footer>
       </div>
     </div>
+    <!-- Card Template -->
     <div *ngFor="let card of ExperienceCards; let i = index">
       <div *ngIf="i !== 0">
         <div class="card" data-aos="fade-up">
