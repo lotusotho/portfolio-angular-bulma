@@ -48,45 +48,43 @@
       </div>
     </div>
     <!-- Card Template -->
-    <div *ngFor="let card of KnowledgeCards; let i = index">
-      <div *ngIf="i !== 0">
-        <div class="card" data-aos="fade-up">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="{{ card.imgBig }}" alt="{{ card.imgBigAlt }}" />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left">
-                <figure class="image is-48x48">
-                  <img src="{{ card.imgSmall }}" alt="{{ card.imgSmallAlt }}" />
-                </figure>
-              </div>
-              <div class="media-content">
-                <p class="title is-4">{{ card.mainTitle }}</p>
-                <p class="subtitle is-6">
-                  {{ card.subtitle }}
-                </p>
-              </div>
+    <ng-container *ngFor="let card of KnowledgeCards; let i = index">
+      <div *ngIf="i !== 0" class="card" data-aos="fade-up">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="{{ card.imgBig }}" alt="{{ card.imgBigAlt }}" />
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="{{ card.imgSmall }}" alt="{{ card.imgSmallAlt }}" />
+              </figure>
             </div>
-
-            <div class="content">
-              <p class="subtitle">
-                {{ card.description }}
+            <div class="media-content">
+              <p class="title is-4">{{ card.mainTitle }}</p>
+              <p class="subtitle is-6">
+                {{ card.subtitle }}
               </p>
             </div>
-            <footer class="card-footer">
-              <a
-                class="button card-footer-item is-success"
-                [routerLink]="card.routerLink"
-                routerLinkActive="router-link-active"
-                >Ver más</a
-              >
-            </footer>
           </div>
+
+          <div class="content">
+            <p class="subtitle">
+              {{ card.description }}
+            </p>
+          </div>
+          <footer class="card-footer">
+            <a
+              class="button card-footer-item is-success"
+              [routerLink]="card.routerLink"
+              routerLinkActive="router-link-active"
+              >Ver más</a
+            >
+          </footer>
         </div>
       </div>
-    </div>
+    </ng-container>
   </div>
 </div>
