@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.mapach.es/home</loc>
+    <loc>https://mapach.es/home</loc>
   </url>
   <url>
-    <loc>https://www.mapach.es/experience</loc>
+    <loc>https://mapach.es/experience</loc>
   </url>
   <url>
-    <loc>https://www.mapach.es/education</loc>
+    <loc>https://mapach.es/education</loc>
   </url>
   <url>
-    <loc>https://www.mapach.es/knowledge</loc>
+    <loc>https://mapach.es/knowledge</loc>
   </url>
   <url>
-    <loc>https://www.mapach.es/about</loc>
+    <loc>https://mapach.es/about</loc>
   </url>
   <url>
-    <loc>https://www.mapach.es/contact</loc>
+    <loc>https://mapach.es/contact</loc>
   </url>
 </urlset>
