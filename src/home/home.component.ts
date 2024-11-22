@@ -22,8 +22,8 @@ export class HomeComponent {
     description:
       'Alejandro Ramos Casado es programador web y artista técnico, con' +
       ' experiencia en desarrollo de aplicaciones, entornos 3D y sistemas' +
-      ' interactivos. Especializado en JavaScript, Java y frameworks como React,' +
-      ' también maneja motores gráficos como Blender y Godot. Su enfoque' +
+      ' interactivos. Especializado en JavaScript, Java y frameworks como Angular,' +
+      ' también maneja motores gráficos como Blender. Su enfoque' +
       ' autodidacta y habilidades en trabajo en equipo destacan en proyectos' +
       ' tecnológicos y creativos.',
   };
