@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Cards } from '../interfaces';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { ScrollComponent } from '../scroll/scroll.component';
 
 @Component({
   standalone: true,
-  imports: [RouterLink, NgFor, ScrollComponent],
+  imports: [RouterLink, NgFor, NgIf, ScrollComponent],
   selector: 'app-experience',
   templateUrl: 'experience.component.html',
   styleUrl: 'experience.component.css',

@@ -3,17 +3,16 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Cards } from '../interfaces';
 import { ScrollComponent } from '../scroll/scroll.component';
-import { AppComponent } from '../app/app.component';
 
 @Component({
   standalone: true,
-  imports: [RouterLink, NgIf, NgFor, ScrollComponent, AppComponent],
+  imports: [RouterLink, NgIf, NgFor, ScrollComponent],
   selector: 'app-knowledge',
   templateUrl: 'knowledge.component.html',
   styleUrl: 'knowledge.component.css',
 })
 export class KnowledgeComponent {
-  knowledgeCards: Cards[] = [
+  KnowledgeCards: Cards[] = [
     {
       imgBig: '/assets/javaLogo.png',
       imgBigAlt: 'Logo Java',
