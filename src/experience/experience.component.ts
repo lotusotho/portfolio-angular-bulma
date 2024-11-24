@@ -30,8 +30,7 @@ export class ExperienceComponent {
       imgSmallAlt: 'Mini logo Confitería del Carmen',
       mainTitle: 'Desarrollador Web',
       subtitle: 'CONFITERÍA DEL CARMEN, La Palma del Condado, Huelva - 2021',
-      description:
-        'Desarrollador de página web de ventas en Wordpress y camarero sirviendo cafés y desayunos.',
+      description: 'Desarrollador de página web de ventas en Wordpress.',
       routerLink: 'exp-1',
     },
     {
