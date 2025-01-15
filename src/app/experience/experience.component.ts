@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Cards } from '../interfaces';
+import { Cards } from '../../interfaces';
 import { NgFor, NgIf } from '@angular/common';
-import { ScrollComponent } from '../scroll/scroll.component';
+import { ScrollComponent } from '../scroll/scroll.component.js';
 
 @Component({
   standalone: true,

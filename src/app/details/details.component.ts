@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { Details } from '../interfaces';
+import { Details } from '../../interfaces';
 import {
   ExperienceDetails,
   EducationDetails,

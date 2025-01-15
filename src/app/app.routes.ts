@@ -1,18 +1,18 @@
 import { Routes } from '@angular/router';
-import { NavbarComponent } from '../navbar/navbar.component';
-import { HomeComponent } from '../home/home.component';
-import { ExperienceComponent } from '../experience/experience.component';
-import { EducationComponent } from '../education/education.component';
-import { DetailsComponent } from '../details/details.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { EducationComponent } from './education/education.component';
 import {
   ExperienceDetails,
   EducationDetails,
   KnowledgeDetails,
-} from '../details/details.storage';
+} from './details/details.storage';
 import { Details } from '../interfaces';
-import { KnowledgeComponent } from '../knowledge/knowledge.component';
-import { AboutComponent } from '../about/about.component';
-import { ContactComponent } from '../contact/contact.component';
+import { KnowledgeComponent } from './knowledge/knowledge.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { DetailsComponent } from './details/details.component.js';
 
 const experienceRoutes = ExperienceDetails.map((detail: Details, index) => ({
   path: `experience/exp-${index}`,

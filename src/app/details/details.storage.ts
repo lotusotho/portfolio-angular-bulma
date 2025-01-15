@@ -1,4 +1,4 @@
-import { Details } from '../interfaces';
+import { Details } from '../../interfaces';
 
 export const ExperienceDetails: Details[] = [
   {

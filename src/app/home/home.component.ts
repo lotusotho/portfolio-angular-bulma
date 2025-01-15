@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxTypedWriterModule } from 'ngx-typed-writer';
-import { Home } from '../interfaces';
+import { Home } from '../../interfaces';
 
 @Component({
   standalone: true,
