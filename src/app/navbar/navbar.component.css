@@ -16,6 +16,11 @@
   justify-content: center;
 }
 
+.navbar-burger {
+  color: black;
+  background-color: white;
+}
+
 @media (max-width: 767px) {
   fa-icon {
     margin: 4px;
