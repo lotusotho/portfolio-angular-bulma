@@ -20,13 +20,11 @@
     "linkedin": {
       "label": "LinkedIn",
       "icon": "/assets/icons/linkedinIcon.svg",
-      "url": "https://www.linkedin.com/in/alejandroramoscasado/",
       "text": "LinkedIn Alejandro Ramos Casado"
     },
     "resume": {
       "text": "Don't forget to check out my Resume!",
-      "button": "CV",
-      "url": "https://drive.google.com/file/d/101wqVS622fxIvwle3D57HvTfwjzielyZ/view?usp=sharing"
+      "button": "CV"
     }
   },
   "education": {
@@ -307,5 +305,6 @@
   "goback": "Go back",
   "thanktoast": "Thank you! 😄👍",
   "lang-eng": "English",
-  "lang-esp": "Spanish"
+  "lang-esp": "Spanish",
+  "cv-url": "https://drive.google.com/file/d/1WWb9LtW_REl4f2nA7LS9h-u1YaU6rH62/view?usp=sharing"
 }

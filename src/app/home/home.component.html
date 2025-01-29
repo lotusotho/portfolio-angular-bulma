@@ -27,7 +27,7 @@
           </ngx-typed-writer>
         </p>
         <a
-          href="https://drive.google.com/file/d/101wqVS622fxIvwle3D57HvTfwjzielyZ/view?usp=sharing"
+          [href]="'cv-url' | translate"
           target="_blank"
           class="button is-medium is-info is-light"
           (click)="showToast()"

@@ -2,7 +2,6 @@ import { Component, Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import AOS from 'aos';
-import { LanguageToggleComponent } from './translatetoggle/translatetoggle.component.js';
 import { LanguageService } from './services/language.service.js';
 import { TranslateService } from '@ngx-translate/core';
 import { CookieService } from 'ngx-cookie-service';
@@ -10,7 +9,7 @@ import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LanguageToggleComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
 })
 export class AppComponent implements AfterViewInit {
