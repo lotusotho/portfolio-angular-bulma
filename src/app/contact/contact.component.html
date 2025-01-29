@@ -1,44 +1,43 @@
 <section class="hero is-fullheight is-default is-bold fadein">
   <div class="container is-fullhd fixed-grid has-3-cols has-1-cols-mobile p-4">
-    <p class="title is-3 has-text-black">ℹ️ Información de Contacto:</p>
-    <p class="subtitle">
-      Aquí dejo algunos recursos para poder comunicarse conmigo:
-    </p>
+    <p class="title is-3 has-text-black">{{ "contact.title" | translate }}</p>
+    <p class="subtitle">{{ "contact.subtitle" | translate }}</p>
     <hr />
     <p class="subtitle is-4 has-text-black">
-      Correo Electrónico 📧:
-      <a href="mailto:arc.2dominguez@gmail.com"
-        >arc.2dominguez&commat;gmail.com</a
-      >
+      {{ "contact.email.label" | translate }}
+      <a href="mailto:{{ 'contact.email.address' | translate }}">
+        {{ "contact.email.address" | translate }}
+      </a>
     </p>
     <p class="subtitle is-4 has-text-black">
-      Teléfono 📱:
-      <a href="tel:+34611602882">+34-611-602-882</a>
+      {{ "contact.phone.label" | translate }}
+      <a href="tel:{{ 'contact.phone.number' | translate }}">
+        {{ "contact.phone.number" | translate }}
+      </a>
     </p>
     <p class="subtitle is-4 has-text-black">
-      LinkedIn
+      {{ "contact.linkedin.label" | translate }}
       <img
-        src="/assets/icons/linkedinIcon.svg"
+        src="{{ 'contact.linkedin.icon' | translate }}"
         alt="Icono LinkedIn"
         width="25px"
       />
       :
-      <a
-        href="https://www.linkedin.com/in/alejandroramoscasado/"
-        target="_blank"
-        >LinkedIn Alejandro Ramos Casado</a
-      >
+      <a href="{{ 'contact.linkedin.url' | translate }}" target="_blank">
+        {{ "contact.linkedin.text" | translate }}
+      </a>
     </p>
     <p class="subtitle is-4 has-text-black has-text-centered">
-      ¡No olvides ver mi Currículum Vitae!
+      {{ "contact.resume.text" | translate }}
       <br />
       <a
-        href="https://drive.google.com/file/d/101wqVS622fxIvwle3D57HvTfwjzielyZ/view?usp=sharing"
+        href="{{ 'contact.resume.url' | translate }}"
         target="_blank"
         class="title is-1 has-text-info"
         (click)="showToast()"
-        >CV</a
       >
+        {{ "contact.resume.button" | translate }}
+      </a>
     </p>
   </div>
 </section>

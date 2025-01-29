@@ -19,15 +19,23 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { isPlatformBrowser } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageToggleComponent } from '../translatetoggle/translatetoggle.component';
 
 @Component({
   standalone: true,
-  imports: [RouterOutlet, RouterLink, FontAwesomeModule],
-  selector: 'app-navbar',
-  templateUrl: 'navbar.component.html',
-  styleUrl: 'navbar.component.css',
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    FontAwesomeModule,
+    TranslateModule,
+    LanguageToggleComponent,
+  ],
+  selector: 'app-header',
+  templateUrl: 'header.component.html',
+  styleUrl: 'header.component.css',
 })
-export class NavbarComponent {
+export class HeaderComponent {
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   @ViewChild('navLogo') navLogo!: ElementRef;

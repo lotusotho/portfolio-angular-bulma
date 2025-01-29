@@ -1,5 +1,5 @@
 <div class="container is-fullhd fixed-grid has-3-cols has-1-cols-mobile p-4">
-  <p class="title is-1 has-text-black">Educación</p>
+  <p class="title is-1 has-text-black">{{ "education.title" | translate }}</p>
   <hr />
   <div class="custom-theme-timeline">
     <ng-template #eventCustomTemplate let-event="event" let-index="index">
@@ -22,7 +22,7 @@
               [routerLink]="event.eventInfo['routerLink']"
               routerLinkActive="router-link-active"
             >
-              Ver más
+              {{ "seemore" | translate }}
             </a>
           </footer>
         </div>

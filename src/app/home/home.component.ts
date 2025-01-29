@@ -1,31 +1,22 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxTypedWriterModule } from 'ngx-typed-writer';
-import { Home } from '../../interfaces';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   standalone: true,
-  imports: [NgxTypedWriterModule, CommonModule],
+  imports: [NgxTypedWriterModule, CommonModule, TranslateModule],
   selector: 'app-home',
   templateUrl: 'home.component.html',
   styleUrl: 'home.component.css',
 })
 export class HomeComponent {
+  constructor(private translate: TranslateService) {}
   hasScrolled = false;
 
-  home: Home = {
-    title: 'Alejandro Ramos Casado',
-    pageDescription: 'Página de presentación personal',
+  home = {
     imgPfp: '/assets/pfp.jpg',
     imgPfpAlt: 'Profile Picture Hero',
-    phrases: ['programador', 'administrador', 'artista técnico', 'riggeador'],
-    description:
-      'Alejandro Ramos Casado es programador web y artista técnico, con' +
-      ' experiencia en desarrollo de aplicaciones, entornos 3D y sistemas' +
-      ' interactivos. Especializado en JavaScript, Java y frameworks como Angular,' +
-      ' también maneja motores gráficos como Blender. Su enfoque' +
-      ' autodidacta y habilidades en trabajo en equipo destacan en proyectos' +
-      ' tecnológicos y creativos.',
   };
 
   @HostListener('window:scroll', [])
@@ -43,7 +34,9 @@ export class HomeComponent {
     toast.style.zIndex = '1000';
     toast.style.padding = '10px';
     toast.style.border = '2px solid #6effbe';
-    toast.innerText = '¡Gracias! 😄👍';
+    this.translate.get('thanktoast').subscribe((translation: string) => {
+      toast.innerText = translation;
+    });
 
     document.body.appendChild(toast);
 

@@ -65,7 +65,7 @@
         routerLinkActive="router-link-active"
       >
         <fa-icon [icon]="homeIcon" [size]="'lg'"></fa-icon>
-        Inicio
+        {{ "header.home" | translate }}
       </a>
 
       <a
@@ -74,7 +74,7 @@
         routerLinkActive="router-link-active"
       >
         <fa-icon [icon]="expIcon" [size]="'lg'"></fa-icon>
-        Experiencia
+        {{ "header.experience" | translate }}
       </a>
 
       <a
@@ -83,7 +83,7 @@
         routerLinkActive="router-link-active"
       >
         <fa-icon [icon]="eduIcon" [size]="'lg'"></fa-icon>
-        Educación
+        {{ "header.education" | translate }}
       </a>
 
       <a
@@ -92,7 +92,7 @@
         routerLinkActive="router-link-active"
       >
         <fa-icon [icon]="knowIcon" [size]="'lg'"></fa-icon>
-        Conocimientos
+        {{ "header.knowledge" | translate }}
       </a>
 
       <a
@@ -101,7 +101,7 @@
         routerLinkActive="router-link-active"
       >
         <fa-icon [icon]="aboutIcon" [size]="'lg'"></fa-icon>
-        Sobre esta página
+        {{ "header.about" | translate }}
       </a>
 
       <a
@@ -110,7 +110,7 @@
         routerLinkActive="router-link-active"
       >
         <fa-icon [icon]="cotactIcon" [size]="'lg'"></fa-icon>
-        Contacto
+        {{ "header.contact" | translate }}
       </a>
       <a
         class="navbar-item has-text-black has-background-info"
@@ -119,8 +119,9 @@
         (click)="showToast()"
       >
         <fa-icon [icon]="cvIcon" [size]="'lg'"></fa-icon>
-        Currículum Vitae
+        {{ "header.cv" | translate }}
       </a>
+      <app-language-toggle class="m-3"></app-language-toggle>
       <div class="navbar-end">
         <a
           class="navbar-item has-background-link has-text-white"
@@ -147,14 +148,14 @@
               href="https://github.com/lotusotho/portfolio-angular-bulma"
               target="_blank"
             >
-              Proyecto Portfolio
+              {{ "header.gh-project" | translate }}
             </a>
             <a
               class="navbar-item has-text-white has-background-black is-size-6"
               href="https://github.com/lotusotho"
               target="_blank"
             >
-              Perfil Alejandro Ramos
+              {{ "header.gh-profile" | translate }}
             </a>
           </div>
         </div>

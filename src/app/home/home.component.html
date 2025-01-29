@@ -2,10 +2,10 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <p class="title is-1">
-        {{ home.title }}
+        {{ "home.title1" | translate }}
       </p>
       <p class="subtitle">
-        {{ home.pageDescription }}
+        {{ "home.description" | translate }}
       </p>
       <div>
         <figure>
@@ -16,10 +16,9 @@
           />
         </figure>
         <p class="title is-3">
-          es un
           <ngx-typed-writer
             class="typewriter"
-            [strings]="home.phrases"
+            [strings]="'home.phrases' | translate"
             [shuffle]="true"
             [isHTML]="true"
             [backSpeed]="20"
@@ -32,11 +31,11 @@
           target="_blank"
           class="button is-medium is-info is-light"
           (click)="showToast()"
-          >Ver Currículum</a
+          >{{ "home.cv" | translate }}</a
         >
-        <p class="title is-3">Descripción personal:</p>
+        <p class="title is-3">{{ "home.title2" | translate }}</p>
         <p class="notification container is-fluid">
-          {{ home.description }}
+          {{ "home.bio" | translate }}
         </p>
       </div>
     </div>

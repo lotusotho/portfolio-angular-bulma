@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
@@ -13,6 +12,7 @@ import { KnowledgeComponent } from './knowledge/knowledge.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetailsComponent } from './details/details.component.js';
+import { HeaderComponent } from './header/header.component.js';
 
 const experienceRoutes = ExperienceDetails.map((detail: Details, index) => ({
   path: `experience/exp-${index}`,
@@ -37,7 +37,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    component: NavbarComponent,
+    component: HeaderComponent,
     children: [
       {
         path: 'home',

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+// TODO: Make footer if needed
 @Component({
   standalone: true,
   imports: [],

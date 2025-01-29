@@ -1,55 +1,11 @@
 <app-scroll></app-scroll>
 <div class="container is-fullhd fixed-grid has-3-cols has-1-cols-mobile p-4">
-  <p class="title is-1 has-text-black">Conocimientos</p>
+  <p class="title is-1 has-text-black">{{ "experience.title" | translate }}</p>
   <hr />
 
   <div class="grid">
-    <!-- Initial Card -->
-    <div class="card fadein">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img
-            src="{{ ExperienceCards[0].imgBig }}"
-            alt="{{ ExperienceCards[0].imgBigAlt }}"
-          />
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img
-                src="{{ ExperienceCards[0].imgSmall }}"
-                alt="{{ ExperienceCards[0].imgSmallAlt }}"
-              />
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">{{ ExperienceCards[0].mainTitle }}</p>
-            <p class="subtitle is-6">
-              {{ ExperienceCards[0].subtitle }}
-            </p>
-          </div>
-        </div>
-
-        <div class="content">
-          <p class="subtitle">
-            {{ ExperienceCards[0].description }}
-          </p>
-        </div>
-        <footer class="card-footer">
-          <a
-            class="button card-footer-item is-success"
-            [routerLink]="ExperienceCards[0].routerLink"
-            routerLinkActive="router-link-active"
-            >Ver más</a
-          >
-        </footer>
-      </div>
-    </div>
-    <!-- Card Template -->
     <ng-container *ngFor="let card of ExperienceCards; let i = index">
-      <div *ngIf="i !== 0" class="card" data-aos="fade-up">
+      <div class="card fadein" [attr.data-aos]="i !== 0 ? 'fade-up' : null">
         <div class="card-image">
           <figure class="image is-4by3">
             <img src="{{ card.imgBig }}" alt="{{ card.imgBigAlt }}" />
@@ -80,7 +36,7 @@
               class="button card-footer-item is-success"
               [routerLink]="card.routerLink"
               routerLinkActive="router-link-active"
-              >Ver más</a
+              >{{ "seemore" | translate }}</a
             >
           </footer>
         </div>

@@ -1,0 +1,18 @@
+<div class="buttons">
+  <a
+    tabindex="0"
+    role="button"
+    class="button is-info"
+    (click)="switchLanguage('en')"
+    (keydown.enter)="switchLanguage('en')"
+    >{{ "lang-eng" | translate }}</a
+  >
+  <a
+    tabindex="0"
+    role="button"
+    class="button is-danger"
+    (click)="switchLanguage('es')"
+    (keydown.enter)="switchLanguage('es')"
+    >{{ "lang-esp" | translate }}</a
+  >
+</div>

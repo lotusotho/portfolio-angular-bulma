@@ -7,10 +7,11 @@ import {
   NgxTimelineOrientation,
   NgxTimelineEventChangeSide,
 } from '@frxjs/ngx-timeline';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   standalone: true,
-  imports: [RouterLink, NgxTimelineModule, CommonModule],
+  imports: [RouterLink, NgxTimelineModule, CommonModule, TranslateModule],
   selector: 'app-education',
   templateUrl: 'education.component.html',
   styleUrl: 'education.component.css',
@@ -23,8 +24,7 @@ export class EducationComponent {
       timestamp: new Date('2024-01-01'),
       title: 'Desarrollo de Aplicaciones Web (DAW)',
       smallTitle: 'DAW',
-      description:
-        'ADA-ITS - Sevilla, 2024 - Ahora. Desarrollo de Aplicaciones Web',
+      description: 'ADA-ITS - Sevilla, 2024 - Desarrollo de Aplicaciones Web',
       id: 'edu-0',
       imageUrl: '/assets/adaitsLogo.png',
       routerLink: 'edu-0',

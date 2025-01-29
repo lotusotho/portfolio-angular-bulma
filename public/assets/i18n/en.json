@@ -1,0 +1,311 @@
+{
+  "about": {
+    "title": "About this website",
+    "subtitle": "Why this page? | What is it for?",
+    "description1": "Hi there 👋! This website serves as both a personal portfolio and a project to learn more about Angular and a CSS framework I really like called Bulma.",
+    "description2": "To build it, I used Angular 18 with Server Side Rendering, Bulma as the CSS framework, AOS for animations, and Gulp for compression. I also like using ESLint to keep the code more organized, and Vercel seemed like a great choice as the hosting platform for this project 😎.",
+    "description3": "Additionally, since I own the domain <b>mapach.es</b> 🦝, I decided to put it to good use by using it for this page 🌟."
+  },
+  "contact": {
+    "title": "ℹ️ Contact Information:",
+    "subtitle": "Here are some ways to get in touch with me:",
+    "email": {
+      "label": "Email 📧:",
+      "address": "arc.2dominguez@gmail.com"
+    },
+    "phone": {
+      "label": "Phone 📱:",
+      "number": "+34-611-602-882"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "icon": "/assets/icons/linkedinIcon.svg",
+      "url": "https://www.linkedin.com/in/alejandroramoscasado/",
+      "text": "LinkedIn Alejandro Ramos Casado"
+    },
+    "resume": {
+      "text": "Don't forget to check out my Resume!",
+      "button": "CV",
+      "url": "https://drive.google.com/file/d/101wqVS622fxIvwle3D57HvTfwjzielyZ/view?usp=sharing"
+    }
+  },
+  "education": {
+    "title": "Education"
+  },
+  "experience": {
+    "title": "Experience"
+  },
+  "knowledge": {
+    "title": "Knowledge"
+  },
+  "home": {
+    "title1": "Alejandro Ramos Casado",
+    "description": "Personal portfolio website",
+    "bio": "Alejandro Ramos Casado is a web developer and technical artist with experience in application development, 3D environments, and interactive systems. Specialized in JavaScript, Java, and frameworks like Angular, he also works with graphics engines like Blender. His self-taught approach and teamwork skills stand out in technological and creative projects.",
+    "phrases": ["programmer", "sysadmin", "technical artist", "rigger"],
+    "cv": "See curriculum",
+    "title2": "Personal description:"
+  },
+  "header": {
+    "home": "Home",
+    "experience": "Experience",
+    "education": "Education",
+    "knowledge": "Knowledge",
+    "about": "About this page",
+    "contact": "Contact",
+    "cv": "Curriculum Vitae",
+    "gh-project": "Portfolio Repository",
+    "gh-profile": "Alejandro Ramos' Profile"
+  },
+  "cards-exp": [
+    {
+      "imgBig": "/assets/tlpLogo.jpg",
+      "imgBigAlt": "TLP Logo",
+      "imgSmall": "/assets/sm/routerSmallLogo.png",
+      "imgSmallAlt": "Mini TLP logo",
+      "mainTitle": "System Administrator",
+      "subtitle": "TELEPALMA S.L - La Palma del Condado, Huelva - 2020",
+      "description": "Optical fiber system programmer based on Linux.",
+      "routerLink": "exp-0"
+    },
+    {
+      "imgBig": "/assets/ccarmenLogo.png",
+      "imgBigAlt": "Confitería del Carmen Logo",
+      "imgSmall": "/assets/sm/devWebSmallLogo.png",
+      "imgSmallAlt": "Mini Confitería del Carmen logo",
+      "mainTitle": "Web Developer",
+      "subtitle": "CONFITERÍA DEL CARMEN, La Palma del Condado, Huelva - 2021",
+      "description": "Web developer for an e-commerce website in Wordpress.",
+      "routerLink": "exp-1"
+    },
+    {
+      "imgBig": "/assets/tmbrLogo.png",
+      "imgBigAlt": "Timberfilms Logo",
+      "imgSmall": "/assets/sm/riggerSmallLogo.png",
+      "imgSmallAlt": "Mini Timberfilms logo",
+      "mainTitle": "3D Character Technical Artist",
+      "subtitle": "TIMBERFILMS - Sevilla - 2022",
+      "description": "Character rigger, creator of movement systems for 3D characters, and head of the VFX and technical development department.",
+      "routerLink": "exp-2"
+    },
+    {
+      "imgBig": "/assets/andreaPic.png",
+      "imgBigAlt": "Project Image from Telepalma",
+      "imgSmall": "/assets/sm/andreaSmallLogo.png",
+      "imgSmallAlt": "Mini Telepalma logo",
+      "mainTitle": "3D Programmer and Modeler",
+      "subtitle": "TELEPALMA S.L - La Palma del Condado, Huelva - 2023",
+      "description": "Director, programmer, and video editor for a 3D virtual reality project.",
+      "routerLink": "exp-3"
+    },
+    {
+      "imgBig": "/assets/guadalinfoPic.png",
+      "imgBigAlt": "Guadalinfo Logo",
+      "imgSmall": "/assets/sm/guadalinfoSmallLogo.png",
+      "imgSmallAlt": "Mini Guadalinfo logo",
+      "mainTitle": "Dynamizer and Manager",
+      "subtitle": "GUADALINFO - La Palma del Condado, Huelva - 2023",
+      "description": "Teacher of office automation courses for both adults and children, and assistant in administrative tasks for multiple entities.",
+      "routerLink": "exp-4"
+    }
+  ],
+  "cards-know": [
+    {
+      "imgBig": "/assets/javaLogo.png",
+      "imgBigAlt": "Java Logo",
+      "imgSmall": "/assets/sm/javaSmallLogo.png",
+      "imgSmallAlt": "Mini Java logo",
+      "mainTitle": "Java",
+      "subtitle": "Knowledge in Java development",
+      "description": "Knowledge in Java 21 development and algorithms for desktop development.",
+      "routerLink": "know-0"
+    },
+    {
+      "imgBig": "/assets/tsjsLogo.png",
+      "imgBigAlt": "Javascript | Typescript Logo",
+      "imgSmall": "/assets/sm/jsSmallLogo.png",
+      "imgSmallAlt": "Mini Javascript logo",
+      "mainTitle": "Javascript | Typescript",
+      "subtitle": "Development using Javascript and Typescript",
+      "description": "Programming in both Typescript and Javascript for backend and frontend using Node.js and libraries such as Express.js, React, or frameworks like Angular.",
+      "routerLink": "know-1"
+    },
+    {
+      "imgBig": "/assets/angLogo.png",
+      "imgBigAlt": "Angular Logo",
+      "imgSmall": "/assets/sm/angSmallLogo.png",
+      "imgSmallAlt": "Mini Angular logo",
+      "mainTitle": "Angular 18",
+      "subtitle": "Knowledge and experience developing pages using Angular 18",
+      "description": "Experience creating websites using Angular 18 and Node.js with npm/pnpm.",
+      "routerLink": "know-2"
+    },
+    {
+      "imgBig": "/assets/ubudebLogo.png",
+      "imgBigAlt": "Debian/Ubuntu Logo",
+      "imgSmall": "/assets/sm/linuxSmallLogo.png",
+      "imgSmallAlt": "Mini Linux logo",
+      "mainTitle": "Linux Systems (Based on Debian)",
+      "subtitle": "Knowledge and experience in creating servers based on Linux",
+      "description": "Experience with Linux systems (Debian, Ubuntu, Ubuntu Server, etc.)",
+      "routerLink": "know-3"
+    },
+    {
+      "imgBig": "/assets/vmLogo.png",
+      "imgBigAlt": "Debian/Ubuntu Logo",
+      "imgSmall": "/assets/sm/vmSmallLogo.png",
+      "imgSmallAlt": "Mini VMs logo",
+      "mainTitle": "VMWare, VirtualBox, and Qemu (KVM)",
+      "subtitle": "Using VMWare, VirtualBox, and Qemu",
+      "description": "Experience using virtual machines such as VMWare, VirtualBox, and QEMU/KVM",
+      "routerLink": "know-4"
+    },
+    {
+      "imgBig": "/assets/gitLogo.png",
+      "imgBigAlt": "Git Logo",
+      "imgSmall": "/assets/sm/vmSmallLogo.png",
+      "imgSmallAlt": "Mini VMs logo",
+      "mainTitle": "Git",
+      "subtitle": "Version control knowledge using Git",
+      "description": "Using Git and GitFlow for versioning and continuous work",
+      "routerLink": "know-5"
+    }
+  ],
+  "details-exp": [
+    {
+      "title": "System Administrator",
+      "image": "/assets/tlpLogo.jpg",
+      "imageAlt": "TLP Logo",
+      "subtitle": "Programmer for fiber optic systems based on Linux.",
+      "description": "Worked with Linux, an open-source operating system known for its stability and flexibility. Configured and maintained telecommunications systems, optimizing fiber optic networks to ensure efficient performance in complex technical environments.",
+      "descriptionSubject": "Linux is an open-source operating system known for its stability and flexibility. It is widely used in servers, embedded devices, and networks due to its ability to be customized and its robustness in technical environments like telecommunications systems.",
+      "routerLink": "exp-0"
+    },
+    {
+      "title": "Web Developer",
+      "image": "/assets/ccarmenLogo.png",
+      "imageAlt": "Confiteria Carmen Logo",
+      "subtitle": "Web applications developer.",
+      "description": "Developed websites using WordPress, a content management system that facilitates the creation of websites and online stores. Customized designs and functionalities, integrating tools like plugins and e-commerce platforms.",
+      "descriptionSubject": "WordPress is a content management system (CMS) that allows easy creation of websites and blogs. It is popular for its intuitive interface, customization through themes and plugins, and its ability to handle online stores with tools like WooCommerce.",
+      "routerLink": "exp-1"
+    },
+    {
+      "title": "3D Character Technical Artist",
+      "image": "/assets/tmbrLogo.png",
+      "imageAlt": "TimberFilms Logo",
+      "subtitle": "Character rigger, creator of movement systems for 3D characters.",
+      "description": "Created rigging systems for 3D characters, designing digital structures that allowed natural and precise movements. This work was essential to achieving realistic animations in audiovisual projects and video games.",
+      "descriptionSubject": "Rigging is a process in 3D animation that involves creating a digital skeleton (bones and controls) so that a model can move realistically. It is essential for character animations and video games.",
+      "routerLink": "exp-2"
+    },
+    {
+      "title": "Programmer and 3D Modeler",
+      "image": "/assets/andreaPic.png",
+      "imageAlt": "TimberFilms Logo",
+      "subtitle": "Director, programmer, and video editor in a 3D virtual reality project.",
+      "description": "Managed virtual reality projects, developing immersive 3D environments through advanced programming and modeling. Coordinated content editing and led the technical aspect to deliver innovative experiences.",
+      "descriptionSubject": "Virtual reality is a technology that allows users to experience simulated 3D environments using devices like VR headsets. It provides immersive experiences for gaming, training, simulations, and entertainment.",
+      "routerLink": "exp-3"
+    },
+    {
+      "title": "Facilitator and Manager",
+      "image": "/assets/guadalinfoPic.png",
+      "imageAlt": "Guadalinfo Logo",
+      "subtitle": "Teacher and administrative assistant for multiple entities.",
+      "description": "Performed administrative tasks, organized documents, optimized internal processes, and provided personalized user support. These actions contributed to improving management and efficiency in various entities.",
+      "descriptionSubject": "This involves performing organizational tasks such as document processing, data management, and user support, facilitating internal processes within a company or organization.",
+      "routerLink": "exp-4"
+    }
+  ],
+  "details-edu": [
+    {
+      "title": "Web Application Development (ADA-ITS, Seville, Current)",
+      "image": "/assets/adaitsLogo.png",
+      "imageAlt": "ADA ITS Logo",
+      "subtitle": "Web Application Development (DAW)",
+      "description": "Currently studying Web Application Development, acquiring advanced knowledge in programming, interface design, databases, and modern web technologies. This program trains professionals capable of developing complete technological solutions in digital environments.",
+      "descriptionSubject": "Web application development focuses on creating software accessible through browsers. It combines programming, interface design, and database management to build dynamic platforms like online stores, management systems, or interactive services. It includes technologies like HTML, CSS, JavaScript, and modern frameworks.",
+      "routerLink": "edu-0"
+    },
+    {
+      "title": "Video Game Development and Interactive Environments (Centro Universitario EUSA, Seville, 2020-2022)",
+      "image": "/assets/eusaLogo.png",
+      "imageAlt": "Centro Eusa Logo",
+      "subtitle": "Video Game Development and Interactive Environments (A3D)",
+      "description": "Completed studies specializing in Video Game Development and Interactive Environments, learning game design and programming, graphics engines, 3D modeling, and creating interactive experiences. This learning combined artistic and technical aspects applied to the digital entertainment industry.",
+      "descriptionSubject": "This field focuses on creating video games and interactive experiences, integrating visual design, programming, and digital narratives. It uses graphics engines like Unity and Blender to develop 3D environments and game mechanics, essential for the entertainment industry and educational simulations.",
+      "routerLink": "edu-1"
+    },
+    {
+      "title": "Microcomputer Systems and Networks",
+      "image": "/assets/dhPic.png",
+      "imageAlt": "Delgado Hernandez Logo",
+      "subtitle": "Microcomputer Systems and Networks (SMR)",
+      "description": "Studied Microcomputer Systems and Networks, acquiring skills in installing, configuring, and maintaining computer systems and networks. This program focused on operating systems management, computer security, and administration of technological infrastructures.",
+      "descriptionSubject": "The field of microcomputer systems and networks encompasses the installation, configuration, and maintenance of hardware and software. It includes the management of local networks, computer security, and troubleshooting, forming the basis of modern technological infrastructures.",
+      "routerLink": "edu-2"
+    }
+  ],
+  "details-know": [
+    {
+      "title": "Java",
+      "image": "/assets/javaLogo.png",
+      "imageAlt": "Java Logo",
+      "subtitle": "Knowledge in Java development",
+      "description": "Has knowledge in developing applications with Java 21, applying advanced programming concepts and algorithms oriented towards desktop applications. Mastery of principles like object-oriented programming, data structures, and design patterns, fundamental for developing efficient and robust software.",
+      "descriptionSubject": "Java is a high-level programming language widely used for its portability and robustness. It is ideal for developing desktop applications, enterprise systems, and Android applications, thanks to its object-oriented approach and ability to run on multiple platforms through the Java Virtual Machine (JVM).",
+      "routerLink": "know-0"
+    },
+    {
+      "title": "JavaScript | TypeScript",
+      "image": "/assets/tsjsLogo.png",
+      "imageAlt": "Typescript and JavaScript Logo",
+      "subtitle": "Master's in Computer Science at ABC University.",
+      "description": "Proficient in JavaScript and TypeScript programming, both on the backend and frontend. Uses Node.js along with libraries like Express.js and React, as well as modern frameworks like Angular. Experienced in developing full-stack applications, from servers to user interfaces.",
+      "descriptionSubject": "JavaScript is a dynamic programming language primarily used for web development, both on the frontend and backend. TypeScript is an extension of JavaScript that adds static typing, improving error detection and code maintenance in large-scale projects.",
+      "routerLink": "know-1"
+    },
+    {
+      "title": "Angular 18",
+      "image": "/assets/angLogo.png",
+      "imageAlt": "Angular Logo",
+      "subtitle": "Experience building websites using Angular 18 and Node.js with npm/pnpm.",
+      "description": "Has significant experience in developing websites using Angular 18, combined with Node.js and package managers like npm/pnpm. Worked on creating dynamic and modern interfaces, applying best practices in frontend development and web architecture.",
+      "descriptionSubject": "Angular is a frontend development framework based on TypeScript that allows building dynamic single-page web applications (SPA). Angular 18 includes advanced tools to manage states, routing, and optimize the performance of modern applications.",
+      "routerLink": "know-2"
+    },
+    {
+      "title": "Linux Systems (Debian-based)",
+      "image": "/assets/ubudebLogo.png",
+      "imageAlt": "Ubuntu and Debian Logo",
+      "subtitle": "Experience with Linux systems (Debian, Ubuntu, and Ubuntu Server, etc.)",
+      "description": "Has experience in managing Linux-based systems, including Debian, Ubuntu, and Ubuntu Server. This includes server configuration, network management, and troubleshooting, with a solid knowledge of protocols, packages, and security in Linux environments.",
+      "descriptionSubject": "Debian and Ubuntu are popular Linux distributions known for their stability and ease of use. Linux is an open-source operating system that enables advanced management of servers, networks, and systems, essential for professional technological environments.",
+      "routerLink": "know-3"
+    },
+    {
+      "title": "VMware, VirtualBox, and Qemu (KVM)",
+      "image": "/assets/vmLogo.png",
+      "imageAlt": "VMware, VirtualBox, and QEMU Logo",
+      "subtitle": "Experience using virtual machines like VMware, VirtualBox, and QEMU/KVM",
+      "description": "Uses virtualization tools like VMware, VirtualBox, and QEMU/KVM to configure and manage virtual machines. These skills enable the creation of simulated environments for testing, development, and secure deployments, optimizing technological resources.",
+      "descriptionSubject": "VMware, VirtualBox, and QEMU (with Kernel-based Virtual Machine) are virtualization tools that allow creating and managing virtual machines. These technologies are used to simulate hardware environments, facilitating testing, development, and deployments without the need for additional hardware.",
+      "routerLink": "know-4"
+    },
+    {
+      "title": "Git",
+      "image": "/assets/gitLogo.png",
+      "imageAlt": "Git Logo",
+      "subtitle": "Use of Git and GitFlow for version control and continuous work",
+      "description": "Masters the use of Git for version control, applying workflows like GitFlow to facilitate collaboration and continuous development. This knowledge ensures efficient project management, maintaining organization and source code history.",
+      "descriptionSubject": "Git is a distributed version control system used to track changes in source code. It allows developers to collaborate on projects, manage different versions, and apply efficient workflows like GitFlow to maintain organization and code quality.",
+      "routerLink": "know-5"
+    }
+  ],
+  "seemore": "See more",
+  "goback": "Go back",
+  "thanktoast": "Thank you! 😄👍",
+  "lang-eng": "English",
+  "lang-esp": "Spanish"
+}

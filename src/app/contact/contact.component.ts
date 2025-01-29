@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   selector: 'app-contact',
   templateUrl: 'contact.component.html',
 })
 export class ContactComponent {
+  constructor(private translate: TranslateService) {}
+
   showToast() {
     const toast = document.createElement('div');
     toast.className = 'toast notification is-success title is-5 has-text-black';
@@ -17,7 +20,9 @@ export class ContactComponent {
     toast.style.zIndex = '1000';
     toast.style.padding = '10px';
     toast.style.border = '2px solid #6effbe';
-    toast.innerText = '¡Gracias! 😄👍';
+    this.translate.get('thanktoast').subscribe((translation: string) => {
+      toast.innerText = translation;
+    });
 
     document.body.appendChild(toast);
 
