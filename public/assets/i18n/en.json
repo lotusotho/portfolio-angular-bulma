@@ -23,8 +23,8 @@
       "text": "LinkedIn Alejandro Ramos Casado"
     },
     "resume": {
-      "text": "Don't forget to check out my Resume!",
-      "button": "CV"
+      "text": "Don't forget to check out my resume!",
+      "button": "Resume"
     }
   },
   "education": {
@@ -41,7 +41,7 @@
     "description": "Personal portfolio website",
     "bio": "Alejandro Ramos Casado is a web developer and technical artist with experience in application development, 3D environments, and interactive systems. Specialized in JavaScript, Java, and frameworks like Angular, he also works with graphics engines like Blender. His self-taught approach and teamwork skills stand out in technological and creative projects.",
     "phrases": ["programmer", "sysadmin", "technical artist", "rigger"],
-    "cv": "See curriculum",
+    "cv": "See Resume",
     "title2": "Personal description:"
   },
   "header": {
@@ -51,7 +51,7 @@
     "knowledge": "Knowledge",
     "about": "About this page",
     "contact": "Contact",
-    "cv": "Curriculum Vitae",
+    "cv": "Resume",
     "gh-project": "Portfolio Repository",
     "gh-profile": "Alejandro Ramos' Profile"
   },
