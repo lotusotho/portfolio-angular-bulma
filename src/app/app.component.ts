@@ -4,7 +4,6 @@ import { isPlatformBrowser } from '@angular/common';
 import AOS from 'aos';
 import { LanguageService } from './services/language.service.js';
 import { TranslateService } from '@ngx-translate/core';
-import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -16,15 +15,16 @@ export class AppComponent implements AfterViewInit {
   constructor(
     @Inject(PLATFORM_ID) private platformId: object,
     private languageService: LanguageService,
-    private language: TranslateService,
-    private cookieService: CookieService
+    private language: TranslateService
   ) {
-    if (!this.cookieService.check('lang')) {
-      this.languageService.setLanguage('en');
-      this.language.setDefaultLang('en');
-    } else {
-      const lang = this.cookieService.get('lang') || 'en';
-      this.languageService.setLanguage(lang);
+    if (isPlatformBrowser(this.platformId)) {
+      if (!localStorage.getItem('lang')) {
+        this.languageService.setLanguage('en');
+        this.language.setDefaultLang('en');
+      } else {
+        const lang = localStorage.getItem('lang') || 'en';
+        this.languageService.setLanguage(lang);
+      }
     }
   }
 
