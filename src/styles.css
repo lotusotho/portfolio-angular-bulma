@@ -1,3 +1,7 @@
+:root {
+  --bulma-navbar-dropdown-arrow: white;
+}
+
 @font-face {
   font-family: "Outfit";
   font-weight: 100;

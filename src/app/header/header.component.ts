@@ -16,6 +16,9 @@ import {
   faIdCard,
   faQuestion,
   faStar,
+  faStarOfLife,
+  faFeather,
+  faNetworkWired,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { isPlatformBrowser } from '@angular/common';
@@ -41,7 +44,8 @@ export class HeaderComponent {
   @ViewChild('navLogo') navLogo!: ElementRef;
   @ViewChild('navBurger') navBurger!: ElementRef;
   @ViewChild('navMenu') navMenu!: ElementRef;
-  @ViewChild('navDropdown') navDropdown!: ElementRef;
+  @ViewChild('navDropdown1') navDropdown1!: ElementRef;
+  @ViewChild('navDropdown2') navDropdown2!: ElementRef;
 
   toggleNavbar() {
     this.navBurger.nativeElement.classList.toggle('is-active');
@@ -53,8 +57,16 @@ export class HeaderComponent {
     this.navMenu.nativeElement.classList.remove('is-active');
   }
 
-  toggleDropdown() {
-    this.navDropdown.nativeElement.classList.toggle('is-active');
+  toggleDropdown1() {
+    this.navDropdown1.nativeElement.classList.toggle('is-active');
+    this.navDropdown2.nativeElement.classList.remove('is-active');
+    this.navBurger.nativeElement.classList.remove('is-active');
+    this.navMenu.nativeElement.classList.remove('is-active');
+  }
+
+  toggleDropdown2() {
+    this.navDropdown2.nativeElement.classList.toggle('is-active');
+    this.navDropdown1.nativeElement.classList.remove('is-active');
     this.navBurger.nativeElement.classList.remove('is-active');
     this.navMenu.nativeElement.classList.remove('is-active');
   }
@@ -62,14 +74,15 @@ export class HeaderComponent {
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: Event): void {
     if (!isPlatformBrowser(this.platformId)) return;
-
     const targetElement = event.target as HTMLElement;
+    const clickedInsideDropdown1 =
+      this.navDropdown1.nativeElement.contains(targetElement);
+    const clickedInsideDropdown2 =
+      this.navDropdown2.nativeElement.contains(targetElement);
 
-    const isClickInsideDropdown =
-      this.navDropdown.nativeElement.contains(targetElement);
-
-    if (!isClickInsideDropdown) {
-      this.navDropdown.nativeElement.classList.remove('is-active');
+    if (!clickedInsideDropdown1 && !clickedInsideDropdown2) {
+      this.navDropdown1.nativeElement.classList.remove('is-active');
+      this.navDropdown2.nativeElement.classList.remove('is-active');
     }
   }
 
@@ -102,4 +115,7 @@ export class HeaderComponent {
   cvIcon = faIdCard;
   githubIcon = faGithubAlt;
   linkedinIcon = faLinkedin;
+  projectsIcon = faStarOfLife;
+  blogMapachesIcon = faFeather;
+  indexMapachesIcon = faNetworkWired;
 }

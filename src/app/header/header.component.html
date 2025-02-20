@@ -121,7 +121,7 @@
         <fa-icon [icon]="cvIcon" [size]="'lg'"></fa-icon>
         {{ "header.cv" | translate }}
       </a>
-      <app-language-toggle class="m-3"></app-language-toggle>
+      <app-language-toggle class="language-toggle m-3"></app-language-toggle>
       <div class="navbar-end">
         <a
           class="navbar-item has-background-link has-text-white"
@@ -132,11 +132,42 @@
           <fa-icon [icon]="linkedinIcon" [size]="'lg'"></fa-icon>
         </a>
         <div
-          #navDropdown
+          #navDropdown1
           role="button"
           tabindex="0"
-          (click)="toggleDropdown()"
-          (keydown.enter)="toggleDropdown()"
+          (click)="toggleDropdown1()"
+          (keydown.enter)="toggleDropdown1()"
+          class="navbar-item has-background-dark has-dropdown"
+        >
+          <a class="navbar-link has-text-white"
+            >{{ "header.projects" | translate }}
+            <fa-icon [icon]="projectsIcon" [size]="'lg'"></fa-icon>
+          </a>
+          <div class="navbar-dropdown is-right">
+            <a
+              class="navbar-item has-text-white has-background-dark is-size-6"
+              href="https://blog.mapach.es"
+              target="_blank"
+            >
+              Blog.Mapach.es
+              <fa-icon [icon]="blogMapachesIcon" [size]="'lg'"></fa-icon>
+            </a>
+            <a
+              class="navbar-item has-text-white has-background-dark is-size-6"
+              href="https://index.mapach.es"
+              target="_blank"
+            >
+              Index.Mapach.es
+              <fa-icon [icon]="indexMapachesIcon" [size]="'lg'"></fa-icon>
+            </a>
+          </div>
+        </div>
+        <div
+          #navDropdown2
+          role="button"
+          tabindex="0"
+          (click)="toggleDropdown2()"
+          (keydown.enter)="toggleDropdown2()"
           class="navbar-item has-background-black has-dropdown"
         >
           <a class="navbar-link has-text-white"
