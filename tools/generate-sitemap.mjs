@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import xmlbuilder from "xmlbuilder";
-import routes from "./routes.json" assert { type: "json" }; // Asegúrate de que routes.json esté en el mismo directorio
+import routes from "./routes.json" assert { type: "json" };
 
 const root = xmlbuilder.create("urlset", {
   version: "1.0",
