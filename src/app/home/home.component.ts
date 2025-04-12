@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxTypedWriterModule } from 'ngx-typed-writer';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -10,9 +10,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: 'home.component.html',
   styleUrl: 'home.component.css',
 })
-export class HomeComponent {
-  constructor(private translate: TranslateService) {}
+export class HomeComponent implements OnInit {
   hasScrolled = false;
+  translatedPhrases: string[] = [];
+  phrasesLoaded = false;
+
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit(): void {
+    this.translate.get('home.phrases').subscribe((phrases: string[]) => {
+      this.translatedPhrases = phrases;
+      this.phrasesLoaded = true;
+    });
+  }
 
   home = {
     imgPfp: '/assets/pfp.jpg',

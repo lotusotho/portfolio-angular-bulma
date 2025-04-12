@@ -17,6 +17,7 @@
         </figure>
         <p class="title is-3">
           <ngx-typed-writer
+            *ngIf="phrasesLoaded"
             class="typewriter"
             [strings]="'home.phrases' | translate"
             [shuffle]="true"
