@@ -6,7 +6,8 @@
     "schematicCollections": ["@angular-eslint/schematics"],
     "cache": {
       "enabled": true
-    }
+    },
+    "analytics": false
   },
   "newProjectRoot": "projects",
   "projects": {
