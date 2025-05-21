@@ -1,135 +1,148 @@
-# Portfolio Alejandro Ramos 
+# Portfolio Alejandro Ramos
 
 <h1 align="center">🦝 <b>MAPACH.ES</b> 🦝</h1>
 <p align="center"><a href="https://mapach.es">MAPACH.ES</a></p>
 
 ---
-Este es un proyecto de portafolio personal creado utilizando **Angular 18** y el framework de diseño **BulmaCSS**. El objetivo del proyecto es ofrecer una plataforma visualmente atractiva, rápida y responsive para mostrar habilidades, experiencia y proyectos personales de manera profesional.
 
-## Tabla de Contenidos
+This is a personal portfolio project created using **Angular 18** and the **BulmaCSS** design framework. The goal of the project is to provide a visually appealing, fast, and responsive platform to professionally showcase personal skills, experience, and projects.
+
+## Table of Contents
 
 - [Portfolio Alejandro Ramos](#portfolio-alejandro-ramos)
-  - [Tabla de Contenidos](#tabla-de-contenidos)
-  - [Descripción del Proyecto](#descripción-del-proyecto)
-  - [Acceso a la Web](#acceso-a-la-web)
-  - [Requisitos Previos](#requisitos-previos)
-  - [Instalación](#instalación)
-  - [Scripts Disponibles](#scripts-disponibles)
-  - [Despliegue](#despliegue)
-    - [Desarrollo Local](#desarrollo-local)
-    - [Producción con SSR](#producción-con-ssr)
-  - [Detalles Técnicos](#detalles-técnicos)
-    - [Tecnologías Utilizadas](#tecnologías-utilizadas)
-    - [Estructura del Proyecto](#estructura-del-proyecto)
+  - [Table of Contents](#table-of-contents)
+  - [Project Description](#project-description)
+  - [Website Access](#website-access)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Available Scripts](#available-scripts)
+  - [Deployment](#deployment)
+    - [Local Development](#local-development)
+    - [Production with SSR](#production-with-ssr)
+  - [Technical Details](#technical-details)
+    - [Technologies Used](#technologies-used)
+    - [Project Structure](#project-structure)
 
 ---
 
-## Descripción del Proyecto
+## Project Description
 
-Este proyecto tiene como propósito:
-- Mostrar información personal, experiencia laboral, habilidades y proyectos.
-- Proveer una experiencia fluida mediante animaciones (usando **AOS**) y diseño moderno gracias a **BulmaCSS**.
-- Soportar renderizado del lado del servidor (**SSR**) para mejorar la velocidad de carga y el SEO.
+This project aims to:
+
+* Showcase personal information, work experience, skills, and projects.
+* Provide a smooth user experience through animations (using **AOS**) and modern design with **BulmaCSS**.
+* Support server-side rendering (**SSR**) to enhance load speed and SEO.
 
 ---
-## Acceso a la Web
-Se puede acceder a la web de las siguientes maneras:
+
+## Website Access
+
+The website can be accessed in the following way:
+
 1. <a href="https://mapach.es">mapach.es</a>
 
 ---
 
+## Prerequisites
 
-## Requisitos Previos
+Before getting started, make sure you have the following installed:
 
-Antes de comenzar, asegúrate de tener instalado lo siguiente:
-
-- **Node.js** (versión 18 o superior)
-- **pnpm**
-- **Angular CLI** (`pnpm install -g @angular/cli`)
-- **Gulp CLI** (`pnpm install -g gulp`)
+* **Node.js** (version 18 or higher)
+* **pnpm**
+* **Angular CLI** (`pnpm install -g @angular/cli`)
+* **Gulp CLI** (`pnpm install -g gulp`)
 
 ---
 
-## Instalación
+## Installation
 
-1. **Clona el repositorio:**
+1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/lotusotho/portfolio-angular-bulma.git
    cd portfolio-angular-bulma
    ```
 
-2. **Instala las dependencias:**
+2. **Install dependencies:**
 
    ```bash
    pnpm install
    ```
 
-3. **Configura el proyecto si es necesario:**  
-   Modifica archivos como `environment.ts` o `angular.json` según sea necesario para tu entorno.
+3. **Configure the project if needed:**
+   Modify files like `environment.ts` or `angular.json` according to your environment.
 
 ---
 
-## Scripts Disponibles
+## Available Scripts
 
-En el archivo `package.json`, hay varios scripts configurados para diferentes tareas:
+In the `package.json` file, several scripts are configured for different tasks:
 
-- **`pnpm start`**  
-  Inicia el servidor de desarrollo. El proyecto estará disponible en `http://localhost:4200`.
+* **`pnpm start`**
+  Starts the development server. The project will be available at `http://localhost:4200`.
 
-- **`pnpm run build`**  
-  Construye la versión optimizada para producción.
+* **`pnpm run build`**
+  Builds the optimized version for production.
 
-- **`pnpm run postbuild`**  
-  Verifica el código con lint y comprime los archivos de producción usando **Gulp**.
+* **`pnpm run postbuild`**
+  Lints the code and compresses production files using **Gulp**.
 
-- **`pnpm run serve:ssr:portfolio-angular-bulma`**  
-  Sirve la aplicación usando renderizado del lado del servidor (SSR).  
+* **`pnpm run serve:ssr:portfolio-angular-bulma`**
+  Serves the application using server-side rendering (SSR).
 
-  **Nota:** Necesitas haber ejecutado `pnpm run build` previamente para generar los archivos en la carpeta `dist`.
+  **Note:** You must run `pnpm run build` beforehand to generate the files in the `dist` folder.
 
-- **`pnpm run serve:compressed`**  
-  Inicia el servidor de desarrollo mientras observa los cambios y aplica compresión automática con **Gulp**.
+* **`pnpm run serve:compressed`**
+  Starts the development server while watching for changes and automatically compresses using **Gulp**.
 
-- **`pnpm run lint`**  
-  Ejecuta análisis estático del código con **Angular ESLint**.
+* **`pnpm run lint`**
+  Runs static code analysis using **Angular ESLint**.
 
 ---
 
-## Despliegue
+## Deployment
 
-### Desarrollo Local
-1. Para ejecutar la aplicación en un entorno de desarrollo:
+### Local Development
+
+1. To run the application in a development environment:
+
    ```bash
    pnpm start
    ```
-   Luego, abre tu navegador en [http://localhost:4200](http://localhost:4200).
 
-### Producción con SSR
-1. Construye la aplicación para producción:
+   Then open your browser at [http://localhost:4200](http://localhost:4200).
+
+### Production with SSR
+
+1. Build the application for production:
+
    ```bash
    pnpm run build
    ```
 
-2. Sirve la aplicación:
+2. Serve the application:
+
    ```bash
    pnpm run serve:ssr:portfolio-angular-bulma
    ```
 
-3. Accede a la aplicación en [http://localhost:4000](http://localhost:4000).
+3. Access the application at [http://localhost:4000](http://localhost:4000).
 
 ---
 
-## Detalles Técnicos
+## Technical Details
 
-### Tecnologías Utilizadas
-- **Angular 18**: Framework para construir aplicaciones web modernas.
-- **BulmaCSS**: Framework CSS para diseño responsivo y atractivo.
-- **AOS (Animate on Scroll)**: Librería para animaciones al hacer scroll.
-- **SSR (Server-Side Rendering)**: Mejoras en SEO y tiempos de carga.
+### Technologies Used
 
-### Estructura del Proyecto
-El código sigue la arquitectura modular de Angular:
-- **`src/app`**: Contiene los componentes principales como Navbar, Home, Experience, etc.
-- **`src/assets`**: Contiene imágenes, estilos y otros recursos estáticos.
-- **`gulpfile.js`**: Configuración de tareas Gulp para compresión.
+* **Angular 18**: Framework for building modern web applications.
+* **BulmaCSS**: CSS framework for responsive and attractive design.
+* **AOS (Animate on Scroll)**: Library for scroll-based animations.
+* **SSR (Server-Side Rendering)**: Improves SEO and load times.
+
+### Project Structure
+
+The code follows Angular’s modular architecture:
+
+* **`src/app`**: Contains main components such as Navbar, Home, Experience, etc.
+* **`src/assets`**: Contains images, styles, and other static assets.
+* **`gulpfile.js`**: Gulp task configuration for compression.
