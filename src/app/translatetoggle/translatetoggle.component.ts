@@ -18,6 +18,6 @@ export class LanguageToggleComponent {
 
   switchLanguage(lang: string): void {
     this.languageService.setLanguage(lang);
-    this.router.navigate(['/home']);
+    window.location.reload();
   }
 }
