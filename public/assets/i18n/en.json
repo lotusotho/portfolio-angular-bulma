@@ -4,7 +4,8 @@
     "subtitle": "Why this page? | What is it for?",
     "description1": "Hi there 👋! This website serves as both a personal portfolio and a project to learn more about Angular and a CSS framework I really like called Bulma.",
     "description2": "To build it, I used Angular 18 with Server Side Rendering, Bulma as the CSS framework, AOS for animations, and Gulp for compression. I also like using ESLint to keep the code more organized, and Vercel seemed like a great choice as the hosting platform for this project 😎.",
-    "description3": "Additionally, since I own the domain <b>mapach.es</b> 🦝, I decided to put it to good use by using it for this page 🌟."
+    "description3": "Additionally, since I own the domain <b>mapach.es</b> 🦝, I decided to put it to good use by using it for this page 🌟.",
+    "repository": "Check out the project repository on GitHub!"
   },
   "contact": {
     "title": "ℹ️ Contact Information:",
