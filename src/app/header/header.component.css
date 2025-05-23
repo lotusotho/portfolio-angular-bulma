@@ -31,7 +31,7 @@
   padding-left: 5px;
 }
 
-@media (min-width: 1440px) and (max-width: 1919px) {
+@media (min-width: 950px) and (max-width: 1919px) {
   .navbar-end,
   .language-toggle {
     display: none;
