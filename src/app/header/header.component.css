@@ -32,8 +32,7 @@
 }
 
 @media (min-width: 950px) and (max-width: 1919px) {
-  .navbar-end,
-  .language-toggle {
+  .navbar-end {
     display: none;
   }
 }
